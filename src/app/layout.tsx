@@ -1,6 +1,7 @@
 import "./globals.css";
-import { geist } from "./ui/fonts";
+import { geist } from "../components/fonts";
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Harshil - A Full Stack web developer.",
@@ -10,11 +11,15 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode,
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${geist.className} antialiased`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${geist.className} antialiased`}>
+        <ThemeProvider attribute="class" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
