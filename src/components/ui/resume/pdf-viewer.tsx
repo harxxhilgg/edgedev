@@ -18,8 +18,6 @@ export default function PdfViewer() {
   useEffect(() => {
     const updateWidth = () => {
       const containerWidth = wrapperRef.current?.clientWidth ?? 0;
-
-      // keep some breathing space inside your max-w-2xl layout
       const w = Math.min(containerWidth - 40, 560);
 
       setPageWidth(w);

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { RotatingText, RotatingTextContainer } from "@/components/animate-ui/primitives/texts/rotating";
 import { BodyBtn, ResumeShareBtn, SocialBtns } from "@/components/ui/main/body-btn";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { TechStack } from "@/components/ui/main/tech-stack";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
 
           <span className="inline-flex min-w-65">
             <RotatingTextContainer
-              text={["A Frontend web developer.", "A Frontend mobile developer."]}
+              text={["A Frontend Web Developer", "A Frontend Mobile Developer", "Software Developer"]}
               duration={2800}
               inView
               inViewOnce
@@ -32,13 +33,14 @@ export default function Home() {
           </span>
         </h1>
 
-        <p className="text-md leading-[2.3] tracking-wide text-zinc-800 dark:text-zinc-400">
+        <p className="text-md leading-[2.3] tracking-wide text-black/90 dark:text-white/90">
           I build interactive mobile apps and web apps using
           <span className="ml-2">{<BodyBtn tech="TypeScript" />} ,</span>
           <span> {<BodyBtn tech="Next.js" />} ,</span>
           <span>{<BodyBtn tech="Expo" />} ,</span>
           <span> {<BodyBtn tech="React" />} ,</span>
           <span> {<BodyBtn tech="React Native" />} ,</span>
+          <span> {<BodyBtn tech="Tailwind CSS" />} ,</span>
           <span> {<BodyBtn tech="npm" />} ,</span>
           <span> {<BodyBtn tech="Node.js" />} ,</span>
           <span> {<BodyBtn tech="PostgreSQL" />} . </span>
@@ -57,6 +59,14 @@ export default function Home() {
 
         <div className="inline-flex mt-6">
           <SocialBtns />
+        </div>
+
+        <div className="mt-6">
+          <TechStack />
+        </div>
+
+        <div className="mt-6">
+          {/* <GithubCommitGraph /> */}
         </div>
 
       </motion.div>
