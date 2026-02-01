@@ -2,6 +2,7 @@ import "./globals.css";
 import { geist } from "../components/fonts";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Harshil - A Full Stack web developer.",
@@ -18,6 +19,9 @@ export default function RootLayout({
       <body className={`${geist.className} antialiased`}>
         <ThemeProvider attribute="class" enableSystem>
           {children}
+          <Toaster
+            position="top-right"
+          />
         </ThemeProvider>
       </body>
     </html>

@@ -100,7 +100,7 @@ export function ResumeShareBtn() {
         className="cursor-pointer"
         asChild
       >
-        <Link href="/contact">
+        <Link href="/get-in-touch">
           <Send size={15} />
           Get in Touch
         </Link>
@@ -117,7 +117,7 @@ export function SocialBtns() {
           <Button
             variant="ghost"
             size="icon"
-            className="text-black/70 dark:text-white/70 cursor-pointer"
+            className="text-secondary cursor-pointer"
             onClick={() => window.open(socials.github, "_blank")}
           >
             <FiGithub color="currentColor" />
@@ -135,7 +135,7 @@ export function SocialBtns() {
           <Button
             variant="ghost"
             size="icon"
-            className="text-black/70 dark:text-white/70 cursor-pointer"
+            className="text-secondary cursor-pointer"
             onClick={() => window.open(socials.linkedin, "_blank")}
           >
             <FaLinkedinIn color="currentColor" />
@@ -153,7 +153,7 @@ export function SocialBtns() {
           <Button
             variant="ghost"
             size="icon"
-            className="text-black/70 dark:text-white/70 cursor-pointer"
+            className="text-secondary cursor-pointer"
           >
             <a href={`mailto:${socials.email}`} aria-label="Mail">
               <Mail color="currentColor" />
@@ -175,7 +175,7 @@ export function FooterBtn() {
     <Button
       variant="link"
       size="sm"
-      className="font-semibold text-[13px] leading-8 tracking-wide text-black/60 dark:text-white/60 px-0 cursor-pointer"
+      className="font-semibold text-[13px] leading-8 tracking-wide text-secondary px-0 cursor-pointer"
       onClick={() => window.open("https://github.com/harxxhilgg", "_blank")}
     >
       Harshil

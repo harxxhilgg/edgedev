@@ -3,9 +3,9 @@ import { TechStackBtn } from "./body-btn";
 export function TechStack() {
   return (
     <div>
-      <h1 className="text-2xl font-semibold">Stack</h1>
+      <h1 className="text-xl font-semibold mb-4">Stack</h1>
 
-      <div className="transition-all flex flex-wrap gap-1 mt-5 p-3 rounded-lg bg-black/5 dark:bg-white/5">
+      <div className="transition-all flex flex-wrap gap-1 p-3 rounded-lg bg-black/5 dark:bg-white/5">
         {/* Languages */}
         <TechStackBtn tech="TypeScript" />
         <TechStackBtn tech="JavaScript" />
@@ -44,7 +44,6 @@ export function TechStack() {
         <TechStackBtn tech="Postman" />
         <TechStackBtn tech="Linux" />
       </div>
-
     </div>
   )
 };

@@ -137,3 +137,40 @@ export const techData: TechItem[] = [
     icon: "/docker-icon.svg",
   },
 ];
+
+export type homeExperienceItem = {
+  id: string;
+  icon: string;
+  alt: string;
+  company: string;
+  role: string;
+  startDate: string;
+  endDate?: string | null;
+  location: string;
+  jobType: string;
+};
+
+export const homeExperienceData: homeExperienceItem[] = [
+  {
+    id: "41b48b2d84d4608e95b63107c9b48f53",
+    icon: "/itf-icon.png",
+    alt: "IT Futurz Icon",
+    company: "IT Futurz",
+    role: "React Native Developer Intern",
+    startDate: "Aug 2025",
+    endDate: "Oct 2025",
+    location: "Surat, India",
+    jobType: "On Site",
+  },
+  {
+    id: "573818ba41b98da3262bbdafae1eb417",
+    icon: "/byte-xl-icon.png",
+    alt: "ByteXL Icon",
+    company: "ByteXL",
+    role: "Frontend Intern",
+    startDate: "May 2024",
+    endDate: "Jul 2024",
+    location: "Vadodara, India",
+    jobType: "On Site",
+  },
+];
