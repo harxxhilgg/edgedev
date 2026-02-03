@@ -1,3 +1,5 @@
+import React from "react";
+
 export type TechItem = {
   tech: string;
   url: string;
@@ -136,6 +138,11 @@ export const techData: TechItem[] = [
     url: "https://www.docker.com/",
     icon: "/docker-icon.svg",
   },
+  {
+    tech: "Figma",
+    url: "https://www.figma.com/",
+    icon: "/figma-icon.svg",
+  },
 ];
 
 export type homeExperienceItem = {
@@ -172,5 +179,59 @@ export const homeExperienceData: homeExperienceItem[] = [
     endDate: "Jul 2024",
     location: "Vadodara, India",
     jobType: "On Site",
+  },
+];
+
+export type ExperienceItem = {
+  id: string;
+  icon: string;
+  alt: string;
+  company: string;
+  role: string;
+  website: string;
+  linkedin: string;
+  startDate: string;
+  endDate?: string | null;
+  location: string;
+  jobType: string;
+  children?: React.ReactNode;
+  // social links (optional)
+  instagram?: string;
+  facebook?: string;
+  twitter?: string;
+  youtube?: string;
+};
+
+export const experienceData: ExperienceItem[] = [
+  {
+    id: "41b48b2d84d4608e95b63107c9b48f53",
+    icon: "/itf-icon.png",
+    alt: "IT Futurz Icon",
+    company: "IT Futurz",
+    role: "React Native Intern",
+    website: "https://itfuturz.in/",
+    linkedin: "https://www.linkedin.com/company/it-futurz/",
+    startDate: "Aug 2025",
+    endDate: "Oct 2025",
+    location: "Surat, India",
+    jobType: "On Site",
+    instagram: "https://www.instagram.com/itfuturz_digital/",
+    facebook: "https://www.facebook.com/ITFuturz/",
+  },
+  {
+    id: "573818ba41b98da3262bbdafae1eb417",
+    icon: "/byte-xl-icon.png",
+    alt: "ByteXL Icon",
+    company: "ByteXL",
+    role: "Frontend Intern",
+    website: "https://www.bytexl.com/",
+    linkedin: "https://www.linkedin.com/company/bytexl/",
+    startDate: "May 2024",
+    endDate: "Jul 2024",
+    location: "Vadodara, India",
+    jobType: "On Site",
+    facebook: "https://www.facebook.com/byteXL/",
+    youtube: "https://www.youtube.com/channel/UCDI3dUKMgAgqrp6Yzvymm1A",
+    instagram: "https://www.instagram.com/byteXL/",
   },
 ];

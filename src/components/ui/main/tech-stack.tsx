@@ -38,6 +38,7 @@ export function TechStack() {
         <TechStackBtn tech="Git" />
         <TechStackBtn tech="GitHub" />
         <TechStackBtn tech="npm" />
+        <TechStackBtn tech="Figma" />
 
         {/* Development Environment */}
         <TechStackBtn tech="VSCode" />

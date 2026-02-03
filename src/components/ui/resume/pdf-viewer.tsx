@@ -18,7 +18,7 @@ export default function PdfViewer() {
   useEffect(() => {
     const updateWidth = () => {
       const containerWidth = wrapperRef.current?.clientWidth ?? 0;
-      const w = Math.min(containerWidth - 40, 560);
+      const w = Math.min(containerWidth - 40, 660);
 
       setPageWidth(w);
     };
@@ -43,8 +43,8 @@ export default function PdfViewer() {
             <Page
               pageNumber={1}
               width={pageWidth}
-              renderTextLayer
-              renderAnnotationLayer
+              renderTextLayer={false}
+              renderAnnotationLayer={false}
             />
           </Document>
         </div>

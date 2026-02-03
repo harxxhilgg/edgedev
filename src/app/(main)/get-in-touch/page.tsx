@@ -15,7 +15,7 @@ export default function Page() {
       >
         <h1 className="mt-10 text-center gap-x-2 text-4xl font-semibold tracking-tight">Contact</h1>
 
-        <p className="mt-3 text-center text-muted-foreground">Get in touch with me. I will get back you as soon as possible.</p>
+        <p className="mt-4 text-center text-muted-foreground">Get in touch with me. I will get back you as soon as possible.</p>
 
         <Separator orientation="horizontal" className="my-10" />
 
