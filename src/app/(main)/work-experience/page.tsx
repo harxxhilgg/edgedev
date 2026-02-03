@@ -1,10 +1,8 @@
 "use client";
 
-import { cardExample } from "@/components/data";
 import { Separator } from "@/components/ui/separator";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ExperienceItem } from "@/components/ui/work-experience/experience-item";
-import { TestCard } from "@/components/ui/work-experience/test-card";
 import { motion } from "framer-motion";
 
 export default function Page() {
