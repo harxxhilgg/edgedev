@@ -28,4 +28,4 @@ export function SocialButton({ icon, url, label }: SocialButtonProps) {
       </TooltipContent>
     </Tooltip>
   );
-};
+}

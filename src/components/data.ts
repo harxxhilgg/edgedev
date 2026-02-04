@@ -94,7 +94,7 @@ export const techData: TechItem[] = [
     icon: "/github-icon.svg",
   },
   {
-    tech: "VSCode",
+    tech: "VS Code",
     url: "https://code.visualstudio.com/",
     icon: "/vscode-icon.svg",
   },
@@ -142,6 +142,26 @@ export const techData: TechItem[] = [
     tech: "Figma",
     url: "https://www.figma.com/",
     icon: "/figma-icon.svg",
+  },
+  {
+    tech: "Firebase",
+    url: "https://firebase.com/",
+    icon: "/firebase-icon.svg",
+  },
+  {
+    tech: "Google Play Console",
+    url: "https://play.google.com/console/",
+    icon: "/google-play-console-icon.svg",
+  },
+  {
+    tech: "HTML",
+    url: "https://en.wikipedia.org/wiki/HTML",
+    icon: "/html-icon.svg",
+  },
+  {
+    tech: "CSS",
+    url: "https://en.wikipedia.org/wiki/CSS",
+    icon: "/css-icon.svg",
   },
 ];
 
@@ -195,6 +215,8 @@ export type ExperienceItem = {
   location: string;
   jobType: string;
   children?: React.ReactNode;
+  technologies: string[];
+  responsibilities: string[];
   // social links (optional)
   instagram?: string;
   facebook?: string;
@@ -215,6 +237,26 @@ export const experienceData: ExperienceItem[] = [
     endDate: "Oct 2025",
     location: "Surat, India",
     jobType: "On Site",
+    technologies: [
+      "React Native",
+      "Nativewind",
+      "Git",
+      "GitHub",
+      "MongoDB",
+      "Figma",
+      "Expo",
+      "Postman",
+      "VS Code",
+      "Firebase",
+      "Google Play Console",
+      "Socket.IO",
+    ],
+    responsibilities: [
+      "Developed and enhanced features for delivery portal mobile application using React Native (Expo).",
+      "Implemented real-time communication using sockets and integrated map-based functionality for location tracking.",
+      "Worked on UI development, state management and backend API integration to deliver end-to-end features.",
+      "Collaborated in developing, debugging and optimizing application with backend team.",
+    ],
     instagram: "https://www.instagram.com/itfuturz_digital/",
     facebook: "https://www.facebook.com/ITFuturz/",
   },
@@ -230,6 +272,21 @@ export const experienceData: ExperienceItem[] = [
     endDate: "Jul 2024",
     location: "Vadodara, India",
     jobType: "On Site",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Git",
+      "Tailwind CSS",
+      "SQL",
+      "Node.js",
+    ],
+    responsibilities: [
+      "Progressed from foundational web standards (HTML5, CSS3, JavaScript) to modern ecosystem tools, mastering React, Tailwind CSS, and Git version control, while grounding problem-solving strategies in core Data Structures and Algorithms.",
+      "Applied this technical stack to architect SkillZone' a full-stack solution utilizing Node.js and Express, where you designed scalable backend logic and engineered RESTful APIs to handle data processing and server-side operations.",
+      "Integrated these backend services with a responsive React frontend to finalize the application architecture, demonstrating end-to-end development proficiency and documenting these technical achievements within a professional developer portfolio.",
+    ],
     facebook: "https://www.facebook.com/byteXL/",
     youtube: "https://www.youtube.com/channel/UCDI3dUKMgAgqrp6Yzvymm1A",
     instagram: "https://www.instagram.com/byteXL/",

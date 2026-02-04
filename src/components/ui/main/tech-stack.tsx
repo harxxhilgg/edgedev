@@ -41,10 +41,10 @@ export function TechStack() {
         <TechStackBtn tech="Figma" />
 
         {/* Development Environment */}
-        <TechStackBtn tech="VSCode" />
+        <TechStackBtn tech="VS Code" />
         <TechStackBtn tech="Postman" />
         <TechStackBtn tech="Linux" />
       </div>
     </div>
-  )
-};
+  );
+}

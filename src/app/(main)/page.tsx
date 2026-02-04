@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <TooltipProvider>
       <HomeContent>
-        <div className="mt-6">
+        <div className="mt-5 sm:mt-6">
           <GithubCommitGraph />
         </div>
       </HomeContent>

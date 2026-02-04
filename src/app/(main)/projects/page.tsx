@@ -9,7 +9,9 @@ export default function Page() {
       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       className="w-full py-6 md:px-3.5 px-6 transition-all"
     >
-      <h1 className="mt-2 text-center gap-x-2 text-2xl sm:text-[28px] font-semibold tracking-tight">Projects</h1>
+      <h1 className="mt-2 text-center gap-x-2 text-2xl sm:text-[28px] font-semibold tracking-tight">
+        Projects
+      </h1>
     </motion.div>
   );
-};
+}

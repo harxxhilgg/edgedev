@@ -11,14 +11,11 @@ export function CommitGraphSkeleton() {
         {weeks.map((_, weekIndex) => (
           <div key={weekIndex} className="flex flex-col gap-0.75">
             {Array.from({ length: daysPerWeek }).map((_, dayIndex) => (
-              <Skeleton
-                key={dayIndex}
-                className="w-2.5 h-2.5 rounded-[2px]"
-              />
+              <Skeleton key={dayIndex} className="w-2.5 h-2.5 rounded-[2px]" />
             ))}
           </div>
         ))}
       </div>
     </div>
   );
-};
+}

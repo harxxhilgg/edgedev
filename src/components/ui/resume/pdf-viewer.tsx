@@ -8,7 +8,7 @@ import "react-pdf/dist/Page/TextLayer.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
+  import.meta.url,
 ).toString();
 
 export default function PdfViewer() {
@@ -35,10 +35,11 @@ export default function PdfViewer() {
           <Document
             file="/resume-harshil.pdf"
             loading={
-              <p className="p-4 text-sm text-black/60 dark:text-white/60">
-              </p>
+              <p className="p-4 text-sm text-black/60 dark:text-white/60"></p>
             }
-            error={<p className="p-4 text-sm text-red-500">Failed to load PDF</p>}
+            error={
+              <p className="p-4 text-sm text-red-500">Failed to load PDF</p>
+            }
           >
             <Page
               pageNumber={1}

@@ -19,9 +19,7 @@ export default function RootLayout({
       <body className={`${geist.className} antialiased`}>
         <ThemeProvider attribute="class" enableSystem>
           {children}
-          <Toaster
-            position="top-right"
-          />
+          <Toaster position="top-right" />
         </ThemeProvider>
       </body>
     </html>

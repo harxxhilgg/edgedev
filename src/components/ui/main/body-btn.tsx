@@ -28,7 +28,7 @@ export function BodyBtn({ tech }: Props) {
       <TooltipTrigger asChild>
         <Button
           variant="outline"
-          className="text-xs border-dashed font-semibold px-2 h-7 rounded-lg text-black dark:text-white bg-zinc-50 dark:bg-zinc-800 dark:hover:bg-zinc-900"
+          className="text-xs border-dashed font-semibold px-2 h-6 rounded-lg text-black dark:text-white bg-zinc-50 dark:bg-zinc-800 dark:hover:bg-zinc-900"
           onClick={() => window.open(item.url, "_blank")}
         >
           <Image
@@ -36,7 +36,7 @@ export function BodyBtn({ tech }: Props) {
             alt={item.tech}
             width={14}
             height={14}
-            className={`rounded-xs select-none ${item.tech === "Next.js" ? "dark:invert" : ""} ${item.tech === "Expo" ? "dark:invert" : ""}`}
+            className={`rounded-xs select-none ${item.tech === "Next.js" ? "dark:invert" : ""} ${item.tech === "Expo" ? "dark:invert" : ""} ${item.tech === "Socket.IO" ? "dark:invert" : ""}`}
           />
           {item.tech}
         </Button>
@@ -47,8 +47,8 @@ export function BodyBtn({ tech }: Props) {
         <p className="font-semibold">{item.tech}</p>
       </TooltipContent>
     </Tooltip>
-  )
-};
+  );
+}
 
 export function TechStackBtn({ tech }: Props) {
   const item = techData.find((t) => t.tech === tech);
@@ -67,7 +67,9 @@ export function TechStackBtn({ tech }: Props) {
             src={item.icon}
             alt={item.tech}
             width={item.tech === "Expo" ? 24 : item.tech === "Docker" ? 38 : 28}
-            height={item.tech === "Expo" ? 24 : item.tech === "Docker" ? 38 : 28}
+            height={
+              item.tech === "Expo" ? 24 : item.tech === "Docker" ? 38 : 28
+            }
             className={`rounded-xs select-none ${item.tech === "Next.js" ? "dark:invert" : ""} ${item.tech === "Expo" ? "dark:invert" : ""} ${item.tech === "Express.js" ? "dark:invert" : ""} ${item.tech === "GitHub" ? "dark:invert" : ""}`}
           />
         </Button>
@@ -79,35 +81,27 @@ export function TechStackBtn({ tech }: Props) {
       </TooltipContent>
     </Tooltip>
   );
-};
+}
 
 export function ResumeShareBtn() {
   return (
     <>
-      <Button
-        variant="outline"
-        className="cursor-pointer"
-        asChild
-      >
+      <Button variant="outline" className="cursor-pointer" asChild>
         <Link href="/resume">
           <FileUser size={15} className="rotate-6" />
           Resume / CV
         </Link>
       </Button>
 
-      <Button
-        variant="ghost"
-        className="cursor-pointer"
-        asChild
-      >
+      <Button variant="ghost" className="cursor-pointer" asChild>
         <Link href="/get-in-touch">
           <Send size={15} />
           Get in Touch
         </Link>
       </Button>
     </>
-  )
-};
+  );
+}
 
 export function SocialBtns() {
   return (
@@ -168,7 +162,7 @@ export function SocialBtns() {
       </Tooltip>
     </>
   );
-};
+}
 
 export function FooterBtn() {
   return (
@@ -181,4 +175,4 @@ export function FooterBtn() {
       Harshil
     </Button>
   );
-};
+}

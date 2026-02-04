@@ -22,11 +22,7 @@ export function ThemeToggle() {
           className="rounded-md active:scale-95 h-7 w-7 cursor-pointer"
           onClick={() => setTheme(isDark ? "light" : "dark")}
         >
-          {isDark ? (
-            <Sun size={14} />
-          ) : (
-            <Moon size={14} />
-          )}
+          {isDark ? <Sun size={14} /> : <Moon size={14} />}
         </Button>
       </TooltipTrigger>
 
@@ -35,5 +31,5 @@ export function ThemeToggle() {
         <p>Switch Theme</p>
       </TooltipContent>
     </Tooltip>
-  )
-};
+  );
+}

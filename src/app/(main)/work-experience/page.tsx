@@ -8,22 +8,23 @@ import { motion } from "framer-motion";
 export default function Page() {
   return (
     <TooltipProvider>
-
       <motion.div
         initial={{ opacity: 0, y: 0, filter: "blur(2px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        className="w-full py-6 md:px-3.5 px-6 transition-all"
+        className="w-full py-6 px-4  transition-all"
       >
-        <h1 className="mt-10 text-center gap-x-2 text-4xl font-semibold tracking-tight">Work Experience</h1>
+        <h1 className="mt-4 sm:mt-10 text-center gap-x-2 text-3xl sm:text-4xl font-semibold tracking-tight">
+          Work Experience
+        </h1>
 
-        <p className="mt-4 text-center text-muted-foreground">My work experience across different companies and roles.</p>
+        <p className="mt-4 mx-10 sm:mx-0 text-center text-secondary transition-all">
+          My work experience across different companies and roles.
+        </p>
 
         <Separator orientation="horizontal" className="my-10" />
 
-        <ExperienceItem>
-          <p>test-if-works</p>
-        </ExperienceItem>
+        <ExperienceItem />
       </motion.div>
     </TooltipProvider>
   );
-};
+}

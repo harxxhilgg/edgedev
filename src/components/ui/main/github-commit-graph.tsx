@@ -44,7 +44,7 @@ function CommitCell({ day }: { day: ContributionDay }) {
       <TooltipTrigger asChild>
         <div
           className={`w-2.5 h-2.5 rounded-[2px] transition-all hover:ring-2 hover:ring-offset-1 hover:ring-zinc-500 dark:hover:ring-zinc-400 ${getContributionLevel(
-            day.contributionCount
+            day.contributionCount,
           )}`}
           aria-label={`${contributionText} on ${formatDate(day.date)}`}
         />
@@ -70,9 +70,17 @@ async function CommitGraphContent() {
     const recentWeeks = data.weeks;
 
     // Calculate month spans (which weeks belong to which month)
-    const monthSpans: { startIndex: number; weekCount: number; label: string }[] = [];
+    const monthSpans: {
+      startIndex: number;
+      weekCount: number;
+      label: string;
+    }[] = [];
     let currentMonth = -1;
-    let currentSpan: { startIndex: number; weekCount: number; label: string } | null = null;
+    let currentSpan: {
+      startIndex: number;
+      weekCount: number;
+      label: string;
+    } | null = null;
 
     recentWeeks.forEach((week, weekIndex) => {
       if (!week.contributionDays[0]) return;
@@ -90,7 +98,7 @@ async function CommitGraphContent() {
         currentSpan = {
           startIndex: weekIndex,
           weekCount: 1,
-          label: date.toLocaleDateString("en-US", { month: "short" })
+          label: date.toLocaleDateString("en-US", { month: "short" }),
         };
       } else if (currentSpan) {
         // Continue current span
@@ -113,14 +121,13 @@ async function CommitGraphContent() {
         </div>
 
         <div className="px-4 py-3 rounded-lg bg-black/5 dark:bg-white/5">
-
           <CommitGraphScrollContainer>
             <div className="inline-block min-w-full">
               <div className="flex gap-0.75 mb-2 h-5">
                 {monthSpans[0] && (
                   <div
                     style={{
-                      width: `${monthSpans[0].weekCount * 10 + (monthSpans[0].weekCount - 1) * 3}px`
+                      width: `${monthSpans[0].weekCount * 10 + (monthSpans[0].weekCount - 1) * 3}px`,
                     }}
                   />
                 )}
@@ -131,7 +138,7 @@ async function CommitGraphContent() {
                     key={index}
                     className="text-xs text-secondary"
                     style={{
-                      width: `${span.weekCount * 10 + (span.weekCount - 1) * 3}px`
+                      width: `${span.weekCount * 10 + (span.weekCount - 1) * 3}px`,
                     }}
                   >
                     {span.label}
@@ -142,7 +149,10 @@ async function CommitGraphContent() {
               {/* Contribution grid */}
               <div className="flex gap-0.75">
                 {recentWeeks.map((week, weekIndex) => (
-                  <div key={weekIndex} className="flex flex-col gap-0.75 shrink-0">
+                  <div
+                    key={weekIndex}
+                    className="flex flex-col gap-0.75 shrink-0"
+                  >
                     {week.contributionDays.map((day, dayIndex) => (
                       <CommitCell key={`${weekIndex}-${dayIndex}`} day={day} />
                     ))}

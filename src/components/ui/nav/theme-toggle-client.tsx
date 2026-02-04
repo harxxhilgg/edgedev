@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
@@ -13,12 +13,13 @@ function ThemeToggleFallback() {
       title="Switch Theme"
     />
   );
-};
+}
 
 export const ThemeToggleClient = dynamic(
-  () => import('@/components/ui/nav/theme-toggle').then(mod => mod.ThemeToggle),
+  () =>
+    import("@/components/ui/nav/theme-toggle").then((mod) => mod.ThemeToggle),
   {
     ssr: false,
-    loading: () => <ThemeToggleFallback />
-  }
+    loading: () => <ThemeToggleFallback />,
+  },
 );

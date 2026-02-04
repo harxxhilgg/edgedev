@@ -4,28 +4,41 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 import { toast } from "sonner";
 import * as z from "zod";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../card";
 import { Field, FieldError, FieldGroup, FieldLabel } from "../field";
 import { Input } from "../input";
-import { InputGroup, InputGroupAddon, InputGroupInput, InputGroupText, InputGroupTextarea } from "../input-group";
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupInput,
+  InputGroupText,
+  InputGroupTextarea,
+} from "../input-group";
 import { Button } from "../button";
 import { RotateCcw, Send, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import { BsExclamationCircle } from "react-icons/bs";
-import { Tooltip, TooltipArrow, TooltipContent, TooltipTrigger } from "../tooltip";
+import {
+  Tooltip,
+  TooltipArrow,
+  TooltipContent,
+  TooltipTrigger,
+} from "../tooltip";
 
 const contactFormSchema = z.object({
   name: z
     .string()
     .min(3, "Name must be at least 3 characters.")
     .max(20, "Name must be at most 20 characters."),
-  phone: z
-    .string()
-    .max(10)
-    .optional()
-    .or(z.literal('')),
-  email: z
-    .email({ message: "Invalid email address." }),
+  phone: z.string().max(10).optional().or(z.literal("")),
+  email: z.email({ message: "Invalid email address." }),
   message: z
     .string()
     .min(2, "Message must be at least 2 characters.")
@@ -62,7 +75,8 @@ export function ContactForm() {
 
       if (response.ok) {
         toast.success("Message sent successfully!", {
-          description: "Thank you for reaching out. I\'ll get back to you soon.",
+          description:
+            "Thank you for reaching out. I\'ll get back to you soon.",
         });
 
         form.reset();
@@ -79,8 +93,8 @@ export function ContactForm() {
       });
     } finally {
       setIsSubmitting(false);
-    };
-  };
+    }
+  }
 
   return (
     <Card className="w-full border-transparent bg-transparent shadow-none transition-all">
@@ -88,15 +102,13 @@ export function ContactForm() {
         <CardTitle>Send me a message</CardTitle>
 
         <CardDescription>
-          Fill out the form below and I will get back to you as soon as possible.
+          Fill out the form below and I will get back to you as soon as
+          possible.
         </CardDescription>
       </CardHeader>
 
       <CardContent className="p-4">
-        <form
-          id="form-rhf-contact"
-          onSubmit={form.handleSubmit(onSubmit)}
-        >
+        <form id="form-rhf-contact" onSubmit={form.handleSubmit(onSubmit)}>
           <FieldGroup>
             <div className="flex flex-col gap-7 md:flex-row md:justify-around md:gap-14">
               <Controller
@@ -129,8 +141,12 @@ export function ContactForm() {
                 control={form.control}
                 render={({ field, fieldState }) => (
                   <Field data-invalid={fieldState.invalid}>
-                    <FieldLabel htmlFor="form-rhf-phone" className="gap-1 items-center">
-                      Phone <span className="text-secondary text-xs">(Optional)</span>
+                    <FieldLabel
+                      htmlFor="form-rhf-phone"
+                      className="gap-1 items-center"
+                    >
+                      Phone{" "}
+                      <span className="text-secondary text-xs">(Optional)</span>
                     </FieldLabel>
 
                     <Input
@@ -253,4 +269,4 @@ export function ContactForm() {
       </CardFooter>
     </Card>
   );
-};
+}

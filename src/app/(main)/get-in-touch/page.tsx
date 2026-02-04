@@ -13,9 +13,13 @@ export default function Page() {
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         className="w-full py-6 md:px-3.5 px-6 transition-all"
       >
-        <h1 className="mt-10 text-center gap-x-2 text-4xl font-semibold tracking-tight">Contact</h1>
+        <h1 className="my-4 sm:my-10 text-center gap-x-2 text-4xl font-semibold tracking-tight">
+          Contact
+        </h1>
 
-        <p className="mt-4 text-center text-muted-foreground">Get in touch with me. I will get back you as soon as possible.</p>
+        <p className="mt-4 text-center text-muted-foreground">
+          Get in touch with me. I will get back you as soon as possible.
+        </p>
 
         <Separator orientation="horizontal" className="my-10" />
 
@@ -23,4 +27,4 @@ export default function Page() {
       </motion.div>
     </TooltipProvider>
   );
-};
+}
