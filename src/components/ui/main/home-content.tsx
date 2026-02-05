@@ -57,7 +57,9 @@ export function HomeContent({ children }: { children?: ReactNode }) {
         With a focus on
         <b className="text-black dark:text-white"> UI </b>
         Design. Enthusiastic about
-        <b className="text-black dark:text-white"> Fullstack Development </b>,
+        <b className="text-black dark:text-white"> Fullstack Development </b>
+        with
+        <b className="text-black dark:text-white"> Next.js</b>,
         driven by a keen eye for design.
       </p>
 
