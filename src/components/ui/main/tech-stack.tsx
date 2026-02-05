@@ -14,6 +14,7 @@ export function TechStack() {
         <TechStackBtn tech="React" />
         <TechStackBtn tech="Next.js" />
         <TechStackBtn tech="Vite" />
+        <TechStackBtn tech="shadcn/ui" />
 
         {/* Mobile */}
         <TechStackBtn tech="React Native" />
@@ -31,7 +32,8 @@ export function TechStack() {
         <TechStackBtn tech="SQL" />
 
         {/* Testing */}
-        <TechStackBtn tech="Jest" />
+        <TechStackBtn tech="React Testing Library" />
+        <TechStackBtn tech="Postman" />
 
         {/* DevOps & Tools */}
         <TechStackBtn tech="Docker" />
@@ -42,7 +44,6 @@ export function TechStack() {
 
         {/* Development Environment */}
         <TechStackBtn tech="VS Code" />
-        <TechStackBtn tech="Postman" />
         <TechStackBtn tech="Linux" />
       </div>
     </div>

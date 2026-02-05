@@ -19,7 +19,7 @@ export function HomeContent({ children }: { children?: ReactNode }) {
     <motion.div
       initial={{ opacity: 0, y: 0, filter: "blur(2px)" }}
       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      className="w-full py-1 px-4 md:py-3.5 md:px-3.5 transition-all"
+      className="w-full py-1 px-4 sm:py-3.5 sm:px-0 transition-all"
     >
       <h1 className="mt-2 mb-7 flex flex-wrap items-center space-x-2 text-[23px] sm:text-2xl font-semibold tracking-normal">
         <span>Hi, I&apos;m Harshil</span>{" "}
@@ -51,6 +51,7 @@ export function HomeContent({ children }: { children?: ReactNode }) {
         <span> {<BodyBtn tech="React" />} ,</span>
         <span> {<BodyBtn tech="React Native" />} ,</span>
         <span> {<BodyBtn tech="Tailwind CSS" />} ,</span>
+        <span> {<BodyBtn tech="shadcn/ui" />} ,</span>
         <span> {<BodyBtn tech="npm" />} ,</span>
         <span> {<BodyBtn tech="Node.js" />} ,</span>
         <span> {<BodyBtn tech="PostgreSQL" />} . </span>

@@ -163,6 +163,16 @@ export const techData: TechItem[] = [
     url: "https://en.wikipedia.org/wiki/CSS",
     icon: "/css-icon.svg",
   },
+  {
+    tech: "React Testing Library",
+    url: "https://testing-library.com/docs/react-testing-library/intro/",
+    icon: "/testing-library-icon.svg",
+  },
+  {
+    tech: "shadcn/ui",
+    url: "https://ui.shadcn.com/",
+    icon: "/shadcn-ui-icon.svg",
+  },
 ];
 
 export type homeExperienceItem = {

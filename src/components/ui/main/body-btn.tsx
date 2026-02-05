@@ -36,7 +36,7 @@ export function BodyBtn({ tech }: Props) {
             alt={item.tech}
             width={14}
             height={14}
-            className={`rounded-xs select-none ${item.tech === "Next.js" ? "dark:invert" : ""} ${item.tech === "Expo" ? "dark:invert" : ""} ${item.tech === "Socket.IO" ? "dark:invert" : ""}`}
+            className={`rounded-xs select-none ${item.tech === "Next.js" ? "dark:invert" : ""} ${item.tech === "Expo" ? "dark:invert" : ""} ${item.tech === "Socket.IO" ? "dark:invert" : ""} ${item.tech === "shadcn/ui" ? "dark:invert" : ""}`}
           />
           {item.tech}
         </Button>
@@ -66,11 +66,11 @@ export function TechStackBtn({ tech }: Props) {
           <Image
             src={item.icon}
             alt={item.tech}
-            width={item.tech === "Expo" ? 24 : item.tech === "Docker" ? 38 : 28}
+            width={item.tech === "Expo" ? 24 : item.tech === "Docker" ? 38 : item.tech === "shadcn/ui" ? 22 : 28}
             height={
-              item.tech === "Expo" ? 24 : item.tech === "Docker" ? 38 : 28
+              item.tech === "Expo" ? 24 : item.tech === "Docker" ? 38 : item.tech === "shadcn/ui" ? 22 : 28
             }
-            className={`rounded-xs select-none ${item.tech === "Next.js" ? "dark:invert" : ""} ${item.tech === "Expo" ? "dark:invert" : ""} ${item.tech === "Express.js" ? "dark:invert" : ""} ${item.tech === "GitHub" ? "dark:invert" : ""}`}
+            className={`rounded-xs select-none ${item.tech === "Next.js" ? "dark:invert" : ""} ${item.tech === "Expo" ? "dark:invert" : ""} ${item.tech === "Express.js" ? "dark:invert" : ""} ${item.tech === "GitHub" ? "dark:invert" : ""} ${item.tech === "shadcn/ui" ? "dark:invert" : ""}`}
           />
         </Button>
       </TooltipTrigger>
