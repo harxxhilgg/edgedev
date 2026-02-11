@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json(
-      { success: true, message: "Message send succesfully!" },
+      { success: true, message: "Message sent succesfully!" },
       { status: 200 },
     );
   } catch (error) {
