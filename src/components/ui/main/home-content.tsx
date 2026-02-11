@@ -76,11 +76,19 @@ export function HomeContent({ children }: { children?: ReactNode }) {
         <TechStack />
       </div>
 
-      {children}
-
       <div className="mt-5 sm:mt-6">
         <Experience />
       </div>
+
+      <div className="mt-5 sm:mt-6">
+        <p className="text-sm text-secondary tracking-wide">About</p>
+
+        <h1 className="text-xl font-semibold tracking-wide">Me</h1>
+
+
+      </div>
+
+      {children}
     </motion.div>
   );
 }

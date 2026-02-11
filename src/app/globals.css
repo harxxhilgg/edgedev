@@ -140,6 +140,25 @@
     color: var(--selection-text);
   }
 
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.4;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .blink {
+    animation: pulse 1.6s infinite ease-in-out;
+  }
+
   /* Custom scrollbar styles for entire app */
   html,
   body {

@@ -15,7 +15,7 @@ export default function MainLayout({
 
         <div className="w-full flex-1">{children}</div>
 
-        <div className="w-full mt-auto py-6">
+        <div className="w-full mt-auto py-4">
           <Footer />
         </div>
       </main>

@@ -173,6 +173,16 @@ export const techData: TechItem[] = [
     url: "https://ui.shadcn.com/",
     icon: "/shadcn-ui-icon.svg",
   },
+  {
+    tech: "mdx",
+    url: "https://mdxjs.com/",
+    icon: "/mdx-icon.svg",
+  },
+  {
+    tech: "Vercel",
+    url: "https://vercel.com/",
+    icon: "/vercel.svg",
+  },
 ];
 
 export type homeExperienceItem = {
@@ -300,5 +310,104 @@ export const experienceData: ExperienceItem[] = [
     facebook: "https://www.facebook.com/byteXL/",
     youtube: "https://www.youtube.com/channel/UCDI3dUKMgAgqrp6Yzvymm1A",
     instagram: "https://www.instagram.com/byteXL/",
+  },
+];
+
+export type ProjectItem = {
+  id: string;
+  slug: string;
+  image: string;
+  alt: string;
+  status: "Live" | "Building";
+  title: string;
+  description: string;
+  website?: string;
+  github?: string;
+  technologies: string[];
+};
+
+export const projectData: ProjectItem[] = [
+  {
+    id: "571a43274d71fb5eb11c6e05aae9babb",
+    slug: "pickndeliver",
+    image: "/projects/pickndeliver-final.png",
+    alt: "PicknDeliver Image",
+    status: "Live",
+    title: "PicknDeliver",
+    description:
+      "Delivery portal mobile application enhanced with real-time communication using sockets and integrated map-based functionality for location tracking.",
+    website:
+      "https://play.google.com/store/apps/details?id=app.itfuturz.pickndeliver&pcampaignid=web_share",
+    technologies: [
+      "TypeScript",
+      "React Native",
+      "Expo",
+      "Nativewind",
+      "MongoDB",
+      "Firebase",
+      "Google Play Console",
+      "Zod",
+      "Git",
+      "GitHub",
+    ],
+  },
+  {
+    id: "07f3606a123c8971e3ef02325f62c6ec",
+    slug: "univent",
+    image: "/projects/univent-final.png",
+    alt: "Univent Image",
+    status: "Live",
+    title: "Univent",
+    description:
+      "Real-time event discovery and registration platform that offers users a streamlined registration flow.",
+    website:
+      "https://expo.dev/accounts/harshil0/projects/univent/builds/79d3ccc8-3a45-46cf-9460-b3208b19aa5b",
+    github: "https://github.com/harxxhilgg/univent",
+    technologies: [
+      "TypeScript",
+      "React Native",
+      "Expo",
+      "Nativewind",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Firebase",
+      "Vercel",
+      "Supabase",
+      "Google Play Console",
+      "Zod",
+      "EAS",
+      "Git",
+      "GitHub",
+    ],
+  },
+  {
+    id: "993981f9aff1fb8ca01bf10559c1c0f2",
+    slug: "axokaze",
+    image: "/projects/axokaze-final.png",
+    alt: "Axokaze Image",
+    status: "Building",
+    title: "AxoKaze",
+    description:
+      "Unified dashboard application integrating Pokédex data, F1 race tracking, real-time weather forecasts, and user profile management.",
+    website: "https://axokaze.vercel.app",
+    github: "https://github.com/harxxhilgg/axokaze-a",
+    technologies: [
+      "TypeScript",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Zustand",
+      "React Router",
+      "Axios",
+      "React Hook Form",
+      "Zod",
+      "Recharts",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Vercel",
+      "Vitest",
+    ],
   },
 ];

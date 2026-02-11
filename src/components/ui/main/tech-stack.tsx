@@ -36,11 +36,14 @@ export function TechStack() {
         <TechStackBtn tech="Postman" />
 
         {/* DevOps & Tools */}
+        <TechStackBtn tech="Vercel" />
+        <TechStackBtn tech="mdx" />
         <TechStackBtn tech="Docker" />
         <TechStackBtn tech="Git" />
         <TechStackBtn tech="GitHub" />
         <TechStackBtn tech="npm" />
         <TechStackBtn tech="Figma" />
+        <TechStackBtn tech="Google Play Console" />
 
         {/* Development Environment */}
         <TechStackBtn tech="VS Code" />

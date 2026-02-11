@@ -117,7 +117,7 @@ async function CommitGraphContent() {
     return (
       <div className="space-y-4">
         <div className="flex items-center">
-          <h2 className="text-xl font-semibold">Activity</h2>
+          <h2 className="text-xl font-semibold">GitHub Activity</h2>
         </div>
 
         <div className="px-4 py-3 rounded-lg bg-black/5 dark:bg-white/5">

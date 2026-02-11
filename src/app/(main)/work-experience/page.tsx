@@ -11,7 +11,7 @@ export default function Page() {
       <motion.div
         initial={{ opacity: 0, y: 0, filter: "blur(2px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        className="w-full py-6 px-4 transition-all"
+        className="w-full py-6 px-4 sm:px-0 transition-all"
       >
         <h1 className="mt-4 sm:mt-10 text-center gap-x-2 text-3xl sm:text-4xl font-semibold tracking-tight">
           Work Experience
