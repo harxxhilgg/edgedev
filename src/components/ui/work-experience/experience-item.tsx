@@ -17,7 +17,8 @@ export function ExperienceItem() {
   return (
     <>
       <div className="flex gap-1.5 mt-2 mb-6">
-        <h1 className="text-xl font-semibold">All Experiences</h1>
+        <h2 className="text-xl font-semibold">All Experiences</h2>
+
         <p className="text-sm text-secondary pt-1.5">
           ({totalExperiences} experiences)
         </p>
@@ -131,9 +132,9 @@ export function ExperienceItem() {
           </div>
 
           <div className="mt-3 space-y-3">
-            <h1 className="font-medium text-[15px] mb-2">
+            <h3 className="font-medium text-[15px] mb-2">
               Technologies & Tools
-            </h1>
+            </h3>
 
             <div className="flex flex-wrap gap-2">
               {item.technologies.map((tech) => (

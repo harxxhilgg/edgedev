@@ -116,9 +116,9 @@ async function CommitGraphContent() {
 
     return (
       <div className="space-y-4">
-        <div className="flex items-center">
-          <h2 className="text-xl font-semibold">GitHub Activity</h2>
-        </div>
+        <section aria-labelledby="activity-heading" className="flex items-center">
+          <h2 id="activity-heading" className="text-xl font-semibold">GitHub Activity</h2>
+        </section>
 
         <div className="px-4 py-3 rounded-lg bg-black/5 dark:bg-white/5">
           <CommitGraphScrollContainer>
@@ -190,12 +190,13 @@ async function CommitGraphContent() {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return (
-      <div className="space-y-4">
-        <h2 className="text-2xl font-semibold">Activity</h2>
-        <div className="text-red-500 text-sm">
+      <section aria-labelledby="activity-error-heading" className="space-y-4">
+        <h2 id="acitivity-error-heading" className="text-2xl font-semibold">Activity</h2>
+
+        <p className="text-red-500 text-sm">
           Failed to load contribution graph. Please try again later.
-        </div>
-      </div>
+        </p>
+      </section>
     );
   }
 }

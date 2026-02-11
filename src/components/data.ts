@@ -411,3 +411,18 @@ export const projectData: ProjectItem[] = [
     ],
   },
 ];
+
+export type aboutMeTechItem = {
+  tech: string[];
+};
+
+export const aboutMeTech = [
+  "TypeScript",
+  "React",
+  "React Native",
+  "Next.js",
+  "Vite",
+  "Node.js",
+  "MongoDB",
+  "PostgreSQL",
+];

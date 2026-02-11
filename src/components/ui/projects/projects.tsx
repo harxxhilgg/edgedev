@@ -15,7 +15,7 @@ export function Project() {
   return (
     <>
       <div className="flex gap-1.5 mt-2 mb-6">
-        <h1 className="text-xl font-semibold">All Projects</h1>
+        <h2 className="text-xl font-semibold">All Projects</h2>
 
         <p className="text-sm text-secondary pt-1.5">
           ({totalProjects} projects)
@@ -29,7 +29,7 @@ export function Project() {
             const isBuilding = item!.status === "Building";
 
             return (
-              <div
+              <article
                 key={item.id}
                 className="border rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden"
               >
@@ -102,7 +102,7 @@ export function Project() {
                   <p className="text-sm line-clamp-3 text-secondary tracking-wide">{item.description || null}</p>
 
                   <div>
-                    <p className="text-sm font-semibold text-secondary mt-4 mb-1">Technologies</p>
+                    <h4 className="text-sm font-semibold text-secondary mt-4 mb-1">Technologies</h4>
 
                     <div className="-ml-2 line-clamp-1 text-secondary">
                       {item.technologies.map((tech) => (
@@ -139,7 +139,7 @@ export function Project() {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </article>
             )
           })}
         </div>

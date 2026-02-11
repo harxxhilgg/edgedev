@@ -6,8 +6,6 @@ import { homeExperienceData } from "@/components/data";
 export function Experience() {
   return (
     <>
-      <h1 className="text-xl mb-4 font-semibold">Experience</h1>
-
       {homeExperienceData.map((item) => (
         <div key={item.id} className="flex justify-between items-center mb-3">
           <div className="flex items-center gap-3">

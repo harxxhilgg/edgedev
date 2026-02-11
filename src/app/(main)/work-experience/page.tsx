@@ -13,17 +13,19 @@ export default function Page() {
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         className="w-full py-6 px-4 sm:px-0 transition-all"
       >
-        <h1 className="mt-4 sm:mt-10 text-center gap-x-2 text-3xl sm:text-4xl font-semibold tracking-tight">
-          Work Experience
-        </h1>
+        <section aria-labelledby="work-experience-header">
+          <h1 id="work-experience-header" className="mt-4 sm:mt-10 text-center gap-x-2 text-3xl sm:text-4xl font-semibold tracking-tight">
+            Work Experience
+          </h1>
 
-        <p className="mt-4 mx-10 sm:mx-0 text-center text-secondary transition-all">
-          My work experience across different companies and roles.
-        </p>
+          <p id="work-experience-description" className="mt-4 mx-10 sm:mx-0 text-center text-secondary transition-all">
+            My work experience across different companies and roles.
+          </p>
 
-        <Separator orientation="horizontal" className="my-10" />
+          <Separator orientation="horizontal" className="my-10" />
 
-        <ExperienceItem />
+          <ExperienceItem />
+        </section>
       </motion.div>
     </TooltipProvider>
   );
