@@ -44,7 +44,7 @@ export function Project() {
                   />
                 </div>
 
-                <div className="w-full p-5 space-y-3">
+                <div className="w-full px-5 pt-5 pb-5 sm:pb-2 space-y-3">
                   <div className="flex justify-between items-center">
                     <h3 className="text-lg font-semibold">{item.title}</h3>
 
@@ -128,6 +128,7 @@ export function Project() {
 
                     <Link
                       href={`/projects/${item.slug}`}
+                      className="hidden sm:block"
                     >
                       <Button
                         variant="link"
@@ -138,6 +139,20 @@ export function Project() {
                       </Button>
                     </Link>
                   </div>
+
+                  <Link
+                    href={`/projects/${item.slug}`}
+                    className="sm:hidden"
+                  >
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="w-full cursor-pointer text-secondary hover:text-primary mt-1"
+                    >
+                      View Details
+                      <ArrowRightIcon size={20} />
+                    </Button>
+                  </Link>
                 </div>
               </article>
             )
