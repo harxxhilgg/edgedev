@@ -446,7 +446,10 @@ export const projectData: ProjectItem[] = [
       "Express.js",
       "PostgreSQL (Supabase)",
       "Vercel",
-      "Jest",
+      "React Testing Library",
+      "React Hook Form",
+      "ImgBB",
+      "NodeMailer",
     ],
     details: {
       description:
@@ -531,8 +534,8 @@ export const projectData: ProjectItem[] = [
     title: "AxoKaze",
     description:
       "Built a web application integrating Pokédex data, F1 race tracking, real-time weather forecasts and user profile management in a unified interface.",
-    website: "live",
-    github: "code",
+    website: "https://axokaze.vercel.app",
+    github: "https://github.com/harxxhilgg/axokaze-a",
     technologies: [
       "React",
       "TypeScript",

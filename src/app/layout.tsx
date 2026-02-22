@@ -1,9 +1,10 @@
 import "./globals.css";
 import { geist } from "../components/fonts";
-import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Analytics } from '@vercel/analytics/next';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Harshil - A Full Stack web developer.",
@@ -21,6 +22,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" enableSystem>
           <TooltipProvider>
             {children}
+            <Analytics />
           </TooltipProvider>
           <Toaster position="top-right" />
         </ThemeProvider>
