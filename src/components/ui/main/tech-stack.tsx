@@ -26,7 +26,8 @@ export function TechStack() {
       {/* Database */}
       <TechStackBtn tech="PostgreSQL" />
       <TechStackBtn tech="MongoDB" />
-      <TechStackBtn tech="SQL" />
+      <TechStackBtn tech="Supabase" />
+      <TechStackBtn tech="Prisma" />
 
       {/* Testing */}
       <TechStackBtn tech="React Testing Library" />

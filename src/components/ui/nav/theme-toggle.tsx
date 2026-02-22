@@ -5,7 +5,6 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-  TooltipArrow,
 } from "@/components/ui/tooltip";
 
 export function ThemeToggle() {
@@ -27,7 +26,6 @@ export function ThemeToggle() {
       </TooltipTrigger>
 
       <TooltipContent>
-        <TooltipArrow className="fill-primary" />
         <p>Switch Theme</p>
       </TooltipContent>
     </Tooltip>

@@ -8,14 +8,14 @@ import { Separator } from "../separator";
 export default function TopNav() {
   return (
     <TooltipProvider>
-      <div className="flex items-center justify-between w-full h-18 sm:h-20 px-4 py-3 sm:py-4 sm:px-0 select-none transition-all">
+      <div className="flex items-center justify-between w-full h-18 sm:h-20 px-4 py-3 sm:py-4 sm:px-4 select-none transition-all">
         <Link href="/" className="active:scale-95 transition-all">
           <Image
             src="/profile-icon-y.png"
             alt="Profile Icon"
             height={46}
             width={46}
-            className="rounded-lg w-11.5 h-11.5 sm:w-11.5 sm:h-11.5"
+            className="rounded-lg w-11.5 h-11.5 sm:w-11.5 sm:h-11.5 border dark:border-primary"
           />
         </Link>
 

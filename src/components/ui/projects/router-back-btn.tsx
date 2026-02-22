@@ -12,7 +12,7 @@ export function RouterBackBtn() {
       variant="outline"
       size="sm"
       onClick={() => router.back()}
-      className="active:scale-95 transition-all duration-300 cursor-pointer"
+      className="cursor-pointer"
     >
       <ArrowUUpLeftIcon />
       Back to Projects

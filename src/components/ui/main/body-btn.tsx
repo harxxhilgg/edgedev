@@ -6,7 +6,6 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-  TooltipArrow,
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import { FileUser, Mail, Send } from "lucide-react";
@@ -43,7 +42,6 @@ export function BodyBtn({ tech }: Props) {
       </TooltipTrigger>
 
       <TooltipContent>
-        <TooltipArrow className="fill-primary" />
         <p className="font-semibold">{item.tech}</p>
       </TooltipContent>
     </Tooltip>
@@ -75,9 +73,12 @@ export function TechStackBtn({ tech }: Props) {
         </Button>
       </TooltipTrigger>
 
-      <TooltipContent>
-        <TooltipArrow className="fill-primary" />
+      <TooltipContent className="inline-flex gap-1">
         <p className="font-semibold">{item.tech}</p>
+
+        {item.techDescription && (
+          <p className="font-semibold">({item.techDescription})</p>
+        )}
       </TooltipContent>
     </Tooltip>
   );
@@ -119,7 +120,6 @@ export function SocialBtns() {
         </TooltipTrigger>
 
         <TooltipContent>
-          <TooltipArrow className="fill-primary" />
           <p className="font-semibold">GitHub</p>
         </TooltipContent>
       </Tooltip>
@@ -137,7 +137,6 @@ export function SocialBtns() {
         </TooltipTrigger>
 
         <TooltipContent>
-          <TooltipArrow className="fill-primary" />
           <p className="font-semibold">LinkedIn</p>
         </TooltipContent>
       </Tooltip>
@@ -156,7 +155,6 @@ export function SocialBtns() {
         </TooltipTrigger>
 
         <TooltipContent>
-          <TooltipArrow className="fill-primary" />
           <p className="font-semibold">Mail</p>
         </TooltipContent>
       </Tooltip>
@@ -217,7 +215,6 @@ export function ProjectTechStackBtn({ tech }: Props) {
       </TooltipTrigger>
 
       <TooltipContent>
-        <TooltipArrow className="fill-primary" />
         <p className="font-semibold">{item.tech}</p>
       </TooltipContent>
     </Tooltip>

@@ -39,7 +39,6 @@ export function Project() {
                     alt={item.alt}
                     height={500}
                     width={500}
-                    className="object-cover"
                     priority
                   />
                 </div>
@@ -115,7 +114,7 @@ export function Project() {
                     <p
                       className={
                         `
-                          text-xs rounded-lg py-1 px-2 flex items-center gap-1.5 border-[.5px]
+                          text-xs rounded-lg py-1 px-2 flex items-center gap-1.5 border-[.5px] tracking-wide
                           ${isLive && "bg-green-500/10"}
                           ${isBuilding && "bg-red-500/10"}
                         `
@@ -123,7 +122,7 @@ export function Project() {
                     >
                       <span className={`h-2 w-2 rounded-full blink ${isLive ? "bg-green-500" : isBuilding ? "bg-red-500" : "bg-gray-500"
                         }`} />
-                      {isLive ? "All Systems Operational" : isBuilding ? "Building" : null}
+                      {isLive ? "Live" : isBuilding ? "Building" : null}
                     </p>
 
                     <Link
