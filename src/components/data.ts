@@ -530,7 +530,7 @@ export const projectData: ProjectItem[] = [
     slug: "axokaze",
     image: "/projects/axokaze-final.png",
     alt: "AxoKaze Image",
-    status: "Live",
+    status: "Building",
     title: "AxoKaze",
     description:
       "Built a web application integrating Pokédex data, F1 race tracking, real-time weather forecasts and user profile management in a unified interface.",
@@ -556,6 +556,7 @@ export const projectData: ProjectItem[] = [
       role: "Full Stack",
       team: "Solo",
       tag: "Unified Dashboard",
+      note: "Social login and Session storage may not work since I am transferring manual authentication to Supabase authentication. For the meantime, you can sign in using your email & password.",
       overview:
         "A unified dashboard application integrating diverse data sources like Pokédex data, F1 race tracking, and real-time weather forecasts.",
       feature: [
