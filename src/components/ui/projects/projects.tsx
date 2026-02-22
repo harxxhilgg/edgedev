@@ -6,7 +6,6 @@ import Link from "next/link";
 import { ArrowRightIcon, GithubLogoIcon, GlobeSimpleIcon } from "@phosphor-icons/react";
 import { Button } from "../button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../tooltip";
-import { TooltipArrow, TooltipProvider } from "@radix-ui/react-tooltip";
 import { ProjectTechStackBtn } from "../main/body-btn";
 
 export function Project() {
@@ -22,142 +21,138 @@ export function Project() {
         </p>
       </div>
 
-      <TooltipProvider>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
-          {projectData.map((item) => {
-            const isLive = item!.status === "Live";
-            const isBuilding = item!.status === "Building";
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
+        {projectData.map((item) => {
+          const isLive = item!.status === "Live";
+          const isBuilding = item!.status === "Building";
 
-            return (
-              <article
-                key={item.id}
-                className="border rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden"
-              >
-                <div className="w-full aspect-3/2 relative overflow-hidden h-44 select-none">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    height={500}
-                    width={500}
-                    priority
-                  />
+          return (
+            <article
+              key={item.id}
+              className="border rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden"
+            >
+              <div className="w-full aspect-3/2 relative overflow-hidden h-44 select-none">
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  height={500}
+                  width={500}
+                  priority
+                />
+              </div>
+
+              <div className="w-full px-5 pt-5 pb-5 sm:pb-2 space-y-3">
+                <div className="flex justify-between items-center">
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+
+                  <div className="inline-flex">
+                    {item.website && (
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="text-secondary cursor-pointer"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              window.open(item.website, "_blank")
+                            }}
+                          >
+                            <GlobeSimpleIcon />
+                          </Button>
+                        </TooltipTrigger>
+
+                        <TooltipContent>
+                          <p className="font-semibold">Website</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    )}
+
+                    {item.github && (
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="text-secondary cursor-pointer"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              window.open(item.github, "_blank")
+                            }}
+                          >
+                            <GithubLogoIcon />
+                          </Button>
+                        </TooltipTrigger>
+
+                        <TooltipContent>
+                          <p className="font-semibold">GitHub</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    )}
+                  </div>
                 </div>
 
-                <div className="w-full px-5 pt-5 pb-5 sm:pb-2 space-y-3">
-                  <div className="flex justify-between items-center">
-                    <h3 className="text-lg font-semibold">{item.title}</h3>
+                <p className="text-sm line-clamp-3 text-secondary tracking-wide">{item.description || null}</p>
 
-                    <div className="inline-flex">
-                      {item.website && (
-                        <Tooltip>
-                          <TooltipTrigger asChild>
-                            <Button
-                              variant="ghost"
-                              size="icon"
-                              className="text-secondary cursor-pointer"
-                              onClick={(e) => {
-                                e.preventDefault();
-                                e.stopPropagation();
-                                window.open(item.website, "_blank")
-                              }}
-                            >
-                              <GlobeSimpleIcon />
-                            </Button>
-                          </TooltipTrigger>
+                <div>
+                  <h4 className="text-sm font-semibold text-secondary mt-4 mb-1">Technologies</h4>
 
-                          <TooltipContent>
-                            <TooltipArrow className="fill-primary" />
-                            <p className="font-semibold">Website</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      )}
-
-                      {item.github && (
-                        <Tooltip>
-                          <TooltipTrigger asChild>
-                            <Button
-                              variant="ghost"
-                              size="icon"
-                              className="text-secondary cursor-pointer"
-                              onClick={(e) => {
-                                e.preventDefault();
-                                e.stopPropagation();
-                                window.open(item.github, "_blank")
-                              }}
-                            >
-                              <GithubLogoIcon />
-                            </Button>
-                          </TooltipTrigger>
-
-                          <TooltipContent>
-                            <TooltipArrow className="fill-primary" />
-                            <p className="font-semibold">GitHub</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      )}
-                    </div>
+                  <div className="-ml-2 line-clamp-1 text-secondary">
+                    {item.technologies.map((tech) => (
+                      <ProjectTechStackBtn key={tech} tech={tech} />
+                    ))}
                   </div>
+                </div>
 
-                  <p className="text-sm line-clamp-3 text-secondary tracking-wide">{item.description || null}</p>
-
-                  <div>
-                    <h4 className="text-sm font-semibold text-secondary mt-4 mb-1">Technologies</h4>
-
-                    <div className="-ml-2 line-clamp-1 text-secondary">
-                      {item.technologies.map((tech) => (
-                        <ProjectTechStackBtn key={tech} tech={tech} />
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex justify-between items-center mt-4">
-                    <p
-                      className={
-                        `
+                <div className="flex justify-between items-center mt-4">
+                  <p
+                    className={
+                      `
                           text-xs rounded-lg py-1 px-2 flex items-center gap-1.5 border-[.5px] tracking-wide
                           ${isLive && "bg-green-500/10"}
                           ${isBuilding && "bg-red-500/10"}
                         `
-                      }
-                    >
-                      <span className={`h-2 w-2 rounded-full blink ${isLive ? "bg-green-500" : isBuilding ? "bg-red-500" : "bg-gray-500"
-                        }`} />
-                      {isLive ? "Live" : isBuilding ? "Building" : null}
-                    </p>
-
-                    <Link
-                      href={`/projects/${item.slug}`}
-                      className="hidden sm:block"
-                    >
-                      <Button
-                        variant="link"
-                        className="px-0 cursor-pointer text-secondary hover:text-primary"
-                      >
-                        View Details
-                        <ArrowRightIcon size={20} />
-                      </Button>
-                    </Link>
-                  </div>
+                    }
+                  >
+                    <span className={`h-2 w-2 rounded-full blink ${isLive ? "bg-green-500" : isBuilding ? "bg-red-500" : "bg-gray-500"
+                      }`} />
+                    {isLive ? "Live" : isBuilding ? "Building" : null}
+                  </p>
 
                   <Link
                     href={`/projects/${item.slug}`}
-                    className="sm:hidden"
+                    className="hidden sm:block"
                   >
                     <Button
-                      variant="outline"
-                      size="lg"
-                      className="w-full cursor-pointer text-secondary hover:text-primary mt-1"
+                      variant="link"
+                      className="px-0 cursor-pointer text-secondary hover:text-primary"
                     >
                       View Details
                       <ArrowRightIcon size={20} />
                     </Button>
                   </Link>
                 </div>
-              </article>
-            )
-          })}
-        </div>
-      </TooltipProvider>
+
+                <Link
+                  href={`/projects/${item.slug}`}
+                  className="sm:hidden"
+                >
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="w-full cursor-pointer text-secondary hover:text-primary mt-1"
+                  >
+                    View Details
+                    <ArrowRightIcon size={20} />
+                  </Button>
+                </Link>
+              </div>
+            </article>
+          )
+        })}
+      </div>
     </>
   );
 };

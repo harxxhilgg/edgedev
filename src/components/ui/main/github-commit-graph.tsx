@@ -8,7 +8,6 @@ import {
 import { Suspense } from "react";
 import { CommitGraphScrollContainer } from "./commit-graph-scroll-container";
 import { CircleAlert } from "lucide-react";
-import { TooltipArrow } from "@radix-ui/react-tooltip";
 import { CommitGraphSkeleton } from "@/components/skeleton";
 
 // Commit cell with tooltip
@@ -51,8 +50,6 @@ function CommitCell({ day }: { day: ContributionDay }) {
       </TooltipTrigger>
 
       <TooltipContent>
-        <TooltipArrow className="fill-primary" />
-
         <p className="font-semibold">{contributionText}</p>
         <p className="text-xs opacity-80">{formatDate(day.date)}</p>
       </TooltipContent>

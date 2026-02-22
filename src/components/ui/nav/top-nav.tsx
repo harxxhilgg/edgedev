@@ -1,42 +1,39 @@
 import { Button } from "@/components/ui/button";
 import { ThemeToggleClient } from "./theme-toggle-client";
-import { TooltipProvider } from "@radix-ui/react-tooltip";
 import Link from "next/link";
 import Image from "next/image";
 import { Separator } from "../separator";
 
 export default function TopNav() {
   return (
-    <TooltipProvider>
-      <div className="flex items-center justify-between w-full h-18 sm:h-20 px-4 py-3 sm:py-4 sm:px-4 select-none transition-all">
-        <Link href="/" className="active:scale-95 transition-all">
-          <Image
-            src="/profile-icon-y.png"
-            alt="Profile Icon"
-            height={46}
-            width={46}
-            className="rounded-lg w-11.5 h-11.5 sm:w-11.5 sm:h-11.5 border dark:border-primary"
-          />
-        </Link>
+    <div className="flex items-center justify-between w-full h-18 sm:h-20 px-4 py-3 sm:py-4 sm:px-4 select-none transition-all">
+      <Link href="/" className="active:scale-95 transition-all">
+        <Image
+          src="/profile-icon-y.png"
+          alt="Profile Icon"
+          height={46}
+          width={46}
+          className="rounded-lg w-11.5 h-11.5 sm:w-11.5 sm:h-11.5 border dark:border-primary"
+        />
+      </Link>
 
-        <div className="flex items-center">
-          <div className="mr-1">
-            <Button variant="link" className="cursor-pointer" asChild>
-              <Link href="/work-experience">Work</Link>
-            </Button>
+      <div className="flex items-center">
+        <div className="mr-1">
+          <Button variant="link" className="cursor-pointer" asChild>
+            <Link href="/work-experience">Work</Link>
+          </Button>
 
-            <Button variant="link" className="cursor-pointer" asChild>
-              <Link href="/projects">Projects</Link>
-            </Button>
-          </div>
+          <Button variant="link" className="cursor-pointer" asChild>
+            <Link href="/projects">Projects</Link>
+          </Button>
+        </div>
 
-          <Separator orientation="vertical" className="h-5" />
+        <Separator orientation="vertical" className="h-5" />
 
-          <div className="flex items-center ml-2">
-            <ThemeToggleClient />
-          </div>
+        <div className="flex items-center ml-2">
+          <ThemeToggleClient />
         </div>
       </div>
-    </TooltipProvider>
+    </div>
   );
 }

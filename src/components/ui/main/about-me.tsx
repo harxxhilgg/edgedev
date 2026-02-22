@@ -21,7 +21,7 @@ export function AboutMe() {
             <h2 id="about-me-heading" className="text-2xl font-bold">Harshil Patel</h2>
 
             <h3 className="text-sm leading-relaxed tracking-wide text-secondary pt-3">
-              I&apos;m a Full Stack mobile and web developer, I love building products to solve real-world problems. I&apos;m specialized in building MVP&apos;s.
+              I&apos;m a Frontend mobile and web developer, I love building products to solve real-world problems. I&apos;m specialized in building MVP&apos;s.
             </h3>
           </div>
 

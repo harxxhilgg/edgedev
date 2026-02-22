@@ -27,7 +27,6 @@ import { useState } from "react";
 import { BsExclamationCircle } from "react-icons/bs";
 import {
   Tooltip,
-  TooltipArrow,
   TooltipContent,
   TooltipTrigger,
 } from "../tooltip";
@@ -193,7 +192,6 @@ export function ContactForm() {
                         </TooltipTrigger>
 
                         <TooltipContent>
-                          <TooltipArrow className="fill-primary" />
                           <div className="py-0.5 inline-flex items-center gap-1">
                             <ShieldCheck size={16} />
                             <p className="text-sm">Your email is safe</p>

@@ -1,4 +1,3 @@
-import { TooltipArrow } from "@radix-ui/react-tooltip";
 import { Button } from "../button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../tooltip";
 
@@ -23,7 +22,6 @@ export function SocialButton({ icon, url, label }: SocialButtonProps) {
       </TooltipTrigger>
 
       <TooltipContent>
-        <TooltipArrow className="fill-primary" />
         <p className="font-semibold">{label}</p>
       </TooltipContent>
     </Tooltip>
