@@ -185,7 +185,7 @@ export function ContactForm() {
                       autoComplete="off"
                       className="bg-input/30"
                     />
-                    <InputGroupAddon align="inline-end">
+                    <InputGroupAddon align="inline-end" className="absolute right-0">
                       <Tooltip>
                         <TooltipTrigger asChild>
                           <BsExclamationCircle className="cursor-default" />
