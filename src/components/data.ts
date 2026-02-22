@@ -456,8 +456,8 @@ export const projectData: ProjectItem[] = [
         "An event discovery and registration platform with a responsive user interface with haptics, delivering a seamless and intuitive navigation experience on mobile devices. It includes a user authentication system with push notifications for event reminders.",
       timeline: "4 Months",
       role: "Full Stack",
-      team: "Solo (Approximation)",
-      tag: "Create & Manage Events (Approximation)",
+      team: "Solo",
+      tag: "Create & Manage Events",
       overview:
         "A platform for real-time event discovery and registration. Users can find events and have a streamlined registration flow.",
       feature: [
@@ -554,8 +554,8 @@ export const projectData: ProjectItem[] = [
         "A web application featuring secure authentication with email/password (OTP verification) and Google OAuth 2.0 integration, featuring JWT-based auto-refresh tokens. It integrates multiple external APIs with optimized data fetching and caching strategies using Zustand for state management.",
       timeline: "3 Months",
       role: "Full Stack",
-      team: "Solo (Approximation)",
-      tag: "Unified Dashboard (Approximation)",
+      team: "Solo",
+      tag: "Unified Dashboard",
       overview:
         "A unified dashboard application integrating diverse data sources like Pokédex data, F1 race tracking, and real-time weather forecasts.",
       feature: [
