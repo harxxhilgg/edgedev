@@ -454,7 +454,7 @@ export const projectData: ProjectItem[] = [
     details: {
       description:
         "An event discovery and registration platform with a responsive user interface with haptics, delivering a seamless and intuitive navigation experience on mobile devices. It includes a user authentication system with push notifications for event reminders.",
-      timeline: "4 Months (Approximation)",
+      timeline: "4 Months",
       role: "Full Stack",
       team: "Solo (Approximation)",
       tag: "Create & Manage Events (Approximation)",
@@ -552,7 +552,7 @@ export const projectData: ProjectItem[] = [
     details: {
       description:
         "A web application featuring secure authentication with email/password (OTP verification) and Google OAuth 2.0 integration, featuring JWT-based auto-refresh tokens. It integrates multiple external APIs with optimized data fetching and caching strategies using Zustand for state management.",
-      timeline: "3 Months (Approximation)",
+      timeline: "3 Months",
       role: "Full Stack",
       team: "Solo (Approximation)",
       tag: "Unified Dashboard (Approximation)",
