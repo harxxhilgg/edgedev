@@ -14,6 +14,7 @@ export default function TopNav() {
           height={46}
           width={46}
           className="rounded-lg w-11.5 h-11.5 sm:w-11.5 sm:h-11.5 border dark:border-primary"
+          loading="eager"
         />
       </Link>
 

@@ -35,6 +35,7 @@ export function BodyBtn({ tech }: Props) {
             alt={item.tech}
             width={14}
             height={14}
+            style={{ width: '14px', height: '14px', objectFit: 'contain' }}
             className={`rounded-xs select-none ${item.tech === "Next.js" && "dark:invert"} ${item.tech === "Expo" && "dark:invert"} ${item.tech === "Socket.IO" && "dark:invert"} ${item.tech === "shadcn/ui" && "dark:invert"}`}
           />
           {item.tech}
@@ -68,6 +69,11 @@ export function TechStackBtn({ tech }: Props) {
             height={
               item.tech === "Expo" ? 24 : item.tech === "Docker" ? 38 : item.tech === "shadcn/ui" ? 22 : item.tech === "mdx" ? 34 : 28
             }
+            style={{ 
+              width: `${item.tech === "Expo" ? 24 : item.tech === "Docker" ? 38 : item.tech === "shadcn/ui" ? 22 : item.tech === "mdx" ? 34 : 28}px`, 
+              height: `${item.tech === "Expo" ? 24 : item.tech === "Docker" ? 38 : item.tech === "shadcn/ui" ? 22 : item.tech === "mdx" ? 34 : 28}px`,
+              objectFit: 'contain' 
+            }}
             className={`rounded-xs select-none ${item.tech === "Next.js" && "dark:invert"} ${item.tech === "Expo" && "dark:invert"} ${item.tech === "Express.js" && "dark:invert"} ${item.tech === "GitHub" && "dark:invert"} ${item.tech === "shadcn/ui" && "dark:invert"} ${item.tech === "mdx" && "dark:invert"} ${item.tech === "Vercel" && "invert dark:invert-0"}`}
           />
         </Button>
@@ -209,6 +215,7 @@ export function ProjectTechStackBtn({ tech }: Props) {
             alt={item.tech}
             width={20}
             height={20}
+            style={{ width: '20px', height: '20px', objectFit: 'contain' }}
             className={`rounded-xs select-none ${item.tech === "Next.js" && "dark:invert"} ${item.tech === "Expo" && "dark:invert"} ${item.tech === "Express.js" && "dark:invert"} ${item.tech === "GitHub" && "dark:invert"} ${item.tech === "shadcn/ui" && "dark:invert"} ${item.tech === "mdx" && "dark:invert"} ${item.tech === "Vercel" && "invert&&dark:invert-0"}`}
           />
         </Button>
