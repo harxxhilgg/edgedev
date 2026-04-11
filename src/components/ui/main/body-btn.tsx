@@ -69,10 +69,10 @@ export function TechStackBtn({ tech }: Props) {
             height={
               item.tech === "Expo" ? 24 : item.tech === "Docker" ? 38 : item.tech === "shadcn/ui" ? 22 : item.tech === "mdx" ? 34 : 28
             }
-            style={{ 
-              width: `${item.tech === "Expo" ? 24 : item.tech === "Docker" ? 38 : item.tech === "shadcn/ui" ? 22 : item.tech === "mdx" ? 34 : 28}px`, 
+            style={{
+              width: `${item.tech === "Expo" ? 24 : item.tech === "Docker" ? 38 : item.tech === "shadcn/ui" ? 22 : item.tech === "mdx" ? 34 : 28}px`,
               height: `${item.tech === "Expo" ? 24 : item.tech === "Docker" ? 38 : item.tech === "shadcn/ui" ? 22 : item.tech === "mdx" ? 34 : 28}px`,
-              objectFit: 'contain' 
+              objectFit: 'contain'
             }}
             className={`rounded-xs select-none ${item.tech === "Next.js" && "dark:invert"} ${item.tech === "Expo" && "dark:invert"} ${item.tech === "Express.js" && "dark:invert"} ${item.tech === "GitHub" && "dark:invert"} ${item.tech === "shadcn/ui" && "dark:invert"} ${item.tech === "mdx" && "dark:invert"} ${item.tech === "Vercel" && "invert dark:invert-0"}`}
           />

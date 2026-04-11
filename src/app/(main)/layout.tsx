@@ -1,5 +1,5 @@
 import Footer from "@/components/footer/bottom-footer";
-// import UnderwayToast from "@/components/ui/main/underway-toast";
+// import UnderwayToast from "@/components/ui/main/underway-toasst";
 import TopNav from "@/components/ui/nav/top-nav";
 
 export default function MainLayout({
@@ -11,7 +11,7 @@ export default function MainLayout({
     <div className="flex min-h-screen items-center justify-center font-sans">
       {/* <UnderwayToast /> */}
       <main className="flex min-h-screen w-full max-w-2xl flex-col items-center sm:items-start">
-        <div className="w-full sticky top-0 z-50 backdrop-blur-xs bg-background/70 sm:bg-background/50">
+        <div className="w-full sticky top-0 z-50 backdrop-blur rounded-bl-sm rounded-br-sm">
           <TopNav />
         </div>
 

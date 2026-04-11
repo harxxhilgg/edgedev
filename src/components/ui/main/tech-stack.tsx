@@ -41,7 +41,7 @@ export function TechStack() {
       <TechStackBtn tech="GitHub" />
       <TechStackBtn tech="npm" />
       <TechStackBtn tech="Figma" />
-      <TechStackBtn tech="Google Play Console" />
+      <TechStackBtn tech="Google Cloud Console" />
 
       {/* Development Environment */}
       <TechStackBtn tech="VS Code" />

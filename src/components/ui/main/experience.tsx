@@ -41,8 +41,8 @@ export function Experience() {
       ))}
 
       <div className="flex mt-8 justify-center">
-        <Button variant="outline" size="sm" asChild className="cursor-default">
-          <Link href="/work-experience" className="">
+        <Button variant="outline" size="sm" asChild className="cursor-pointer">
+          <Link href="/work-experience">
             Show all work experiences
           </Link>
         </Button>

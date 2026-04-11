@@ -6,7 +6,7 @@ import { Separator } from "../separator";
 
 export default function TopNav() {
   return (
-    <div className="flex items-center justify-between w-full h-18 sm:h-20 px-4 py-3 sm:py-4 sm:px-4 select-none transition-all">
+    <div className="flex items-center justify-between h-18 sm:h-20 px-4 py-3 sm:py-4 sm:px-4 select-none transition-all">
       <Link href="/" className="active:scale-95 transition-all">
         <Image
           src="/profile-icon-y.png"

@@ -150,9 +150,9 @@ export const techData: TechItem[] = [
     icon: "/firebase-icon.svg",
   },
   {
-    tech: "Google Play Console",
-    url: "https://play.google.com/console/",
-    icon: "/google-play-console-icon.svg",
+    tech: "Google Cloud Console",
+    url: "https://console.cloud.google.com/",
+    icon: "/google-cloud-icon.svg",
   },
   {
     tech: "HTML",
@@ -280,7 +280,7 @@ export const experienceData: ExperienceItem[] = [
       "Postman",
       "VS Code",
       "Firebase",
-      "Google Play Console",
+      "Google Cloud Console",
       "Socket.IO",
     ],
     responsibilities: [
@@ -379,9 +379,9 @@ export const projectData: ProjectItem[] = [
     website:
       "https://play.google.com/store/apps/details?id=app.itfuturz.pickndeliver&pcampaignid=web_share",
     technologies: [
-      "TypeScript",
-      "React Native",
       "Expo",
+      "React Native",
+      "TypeScript",
       "Nativewind",
       "MongoDB",
       "Firebase",
@@ -439,8 +439,8 @@ export const projectData: ProjectItem[] = [
       "https://expo.dev/accounts/harshil0/projects/univent/builds/79d3ccc8-3a45-46cf-9460-b3208b19aa5b",
     github: "https://github.com/harxxhilgg/univent",
     technologies: [
-      "React-Native",
       "Expo",
+      "React Native",
       "TypeScript",
       "Node.js",
       "Express.js",
@@ -537,9 +537,9 @@ export const projectData: ProjectItem[] = [
     website: "https://axokaze.vercel.app",
     github: "https://github.com/harxxhilgg/axokaze-a",
     technologies: [
+      "Vite",
       "React",
       "TypeScript",
-      "Vite",
       "Tailwind CSS",
       "Zustand",
       "React Router",
@@ -548,6 +548,8 @@ export const projectData: ProjectItem[] = [
       "Zod",
       "Recharts",
       "Vitest",
+      "Supabase",
+      "Vercel",
     ],
     details: {
       description:
@@ -620,6 +622,110 @@ export const projectData: ProjectItem[] = [
         {
           description:
             "Introduce a paid subscription tier offering premium features like historical data for F1 and extended weather forecasts.",
+        },
+      ],
+    },
+  },
+  {
+    id: "66b29b9160d8c685ae44f97539d255e3",
+    slug: "nextry",
+    image: "/projects/nextry-final.png",
+    alt: "Nextry Image",
+    status: "Live",
+    title: "Nextry",
+    description:
+      "A high-performance Next.js application featuring an AI-powered roasting engine, immersive 3D visuals, and real-time URL state synchronization.",
+    website: "https://nex-try.vercel.app",
+    github: "https://github.com/harxxhilgg/nextry",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Gemini",
+      "Prisma",
+      "Supabase",
+      "Redux Toolkit",
+      "Framer Motion",
+      "Three.js",
+      "GSAP",
+      "nuqs",
+      "zod",
+      "React Hook Form",
+      "Vercel",
+    ],
+    details: {
+      description:
+        "Nextry is a cutting-edge web application that showcases the power of the modern React ecosystem. At its core is an 'AI Roaster' powered by Google's Gemini 2.5 Flash model, which generates witty, context-aware punchlines based on user-provided bios. The application features a highly interactive UI built with Tailwind CSS 4, Framer Motion, and Three.js, ensuring a premium feel with fluid animations and responsive design.",
+      timeline: "2 Months",
+      role: "Full Stack",
+      team: "Solo",
+      tag: "AI Powered Next.js Template",
+      note: "The project leverages the latest experimental features of React 19 and Next.js 16, including Server Actions and enhanced metadata handling. It uses Supabase for secure authentication and Prisma as a type-safe ORM for PostgreSQL.",
+      overview:
+        "A sophisticated dashboard application integrating diverse Generative AI features with high-end motion design and secure data management.",
+      feature: [
+        {
+          title: "AI Roasting Engine:",
+          description:
+            "Integrated Google Gemini 2.5 Flash to generate personalized, multi-level punchlines (Mild, Medium, Savage) with built-in copy-to-clipboard functionality for easy sharing.",
+        },
+        {
+          title: "URL-Synced State (nuqs):",
+          description:
+            "Implemented real-time URL state management using nuqs, allowing users to share or bookmark specific roast configurations and dashboard views instantly.",
+        },
+        {
+          title: "Immersive 3D & Motion UI:",
+          description:
+            "Developed a visually rich interface using React Three Fiber for 3D elements and GSAP/Framer Motion for complex, high-performance layout transitions.",
+        },
+        {
+          title: "Robust Data Architecture:",
+          description:
+            "Built a type-safe backend using Prisma with PostgreSQL and integrated Supabase SSR for seamless authentication and session management.",
+        },
+      ],
+      whyIBuiltTitle:
+        "I created Nextry to push the boundaries of modern full-stack development by combining the latest Generative AI models with high-end frontend engineering and the newest React 19 primitives.",
+      whyIBuilt: [
+        {
+          description:
+            "To master the cutting-edge features of Next.js 16 and React 19, focusing on Server Components and optimized data fetching.",
+        },
+        {
+          description:
+            "To explore practical implementations of Generative AI in user-facing applications using the Google GenAI SDK.",
+        },
+        {
+          description:
+            "To implement advanced state management strategies, combining Redux Toolkit for global state and nuqs for URL-based state.",
+        },
+        {
+          description:
+            "To practice creating premium user experiences through the integration of 3D visuals and sophisticated motion libraries.",
+        },
+        {
+          description:
+            "To build a production-grade authentication and data layer using Supabase and Prisma.",
+        },
+      ],
+      futurePlans: [
+        {
+          description:
+            "Introduce a global 'Roast Gallery' where users can showcase and upvote the funniest AI-generated punchlines.",
+        },
+        {
+          description:
+            "Implement 'Roast Vision' using Gemini Multimodal models to analyze and roast profile pictures directly.",
+        },
+        {
+          description:
+            "Expand the dashboard with real-time analytics for user engagement and AI response metrics.",
+        },
+        {
+          description:
+            "Develop a mobile-native version using React Native or Expo to bring the immersive experience to handheld devices. (in progress)",
         },
       ],
     },
