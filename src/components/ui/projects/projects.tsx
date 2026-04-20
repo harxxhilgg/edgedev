@@ -25,6 +25,7 @@ export function Project() {
         {projectData.map((item) => {
           const isLive = item!.status === "Live";
           const isBuilding = item!.status === "Building";
+          const isDeveloped = item!.status === "Developed";
 
           return (
             <article
@@ -113,12 +114,20 @@ export function Project() {
                           text-xs rounded-lg py-1 px-2 flex items-center gap-1.5 border-[.5px] tracking-wide
                           ${isLive && "bg-green-500/10"}
                           ${isBuilding && "bg-red-500/10"}
+                          ${isDeveloped && "bg-blue-500/10"}
                         `
                     }
                   >
-                    <span className={`h-2 w-2 rounded-full blink ${isLive ? "bg-green-500" : isBuilding ? "bg-red-500" : "bg-gray-500"
-                      }`} />
-                    {isLive ? "Live" : isBuilding ? "Building" : null}
+                    <span
+                      className={
+                        `
+                          h-2 w-2 rounded-full blink
+                          ${isLive ? "bg-green-500" : isBuilding ? "bg-red-500" : isDeveloped ? "bg-blue-500" : "bg-gray-500"}
+                        `
+                      }
+                    />
+
+                    {isLive ? "Live" : isBuilding ? "Building" : isDeveloped ? "Developed" : null}
                   </p>
 
                   <Link

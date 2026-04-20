@@ -350,6 +350,7 @@ export type ProjectDetails = {
   whyIBuiltTitle?: string;
   whyIBuilt?: ProjectWhyIBuiltItem[];
   futurePlans?: FuturePlanItem[];
+  images?: string[];
 };
 
 export type ProjectItem = {
@@ -357,7 +358,7 @@ export type ProjectItem = {
   slug: string;
   image: string;
   alt: string;
-  status: "Live" | "Building";
+  status: "Live" | "Building" | "Developed";
   title: string;
   description: string;
   website?: string;
@@ -727,6 +728,107 @@ export const projectData: ProjectItem[] = [
           description:
             "Develop a mobile-native version using React Native or Expo to bring the immersive experience to handheld devices. (in progress)",
         },
+      ],
+    },
+  },
+  {
+    id: "e5f1d11a084e19d5872ba2b845942671",
+    slug: "minimal",
+    image: "/projects/minimal/minimal-final.png",
+    alt: "Minimal Expo Starter Kit Image",
+    status: "Developed",
+    title: "Minimal",
+    description:
+      "A production-grade Expo application starter kit featuring fully integrated Supabase authentication, robust route protection, global state management and premium UI primitives.",
+    github: "https://github.com/harxxhilgg/reusables-ex",
+    technologies: [
+      "Expo",
+      "React Native",
+      "TypeScript",
+      "Uniwind",
+      "Supabase",
+      "Redux Toolkit",
+      "MMKV",
+    ],
+    details: {
+      description:
+        "Minimal is a high-performance mobile application template designed to accelerate the development of the modern Expo ecosystem. It provides a solid foundation with a pre-configured architecture for authentication, navigation, and state management maintaining a premium feel with fluid animations and a responsive design powered by Uniwind.",
+      timeline: "Ongoing",
+      role: "Full Stack",
+      team: "Solo",
+      tag: "an expo application starter kit",
+      note: "The 'Developed' status indicates that this is a production-ready boilerplate rather than a retail app. It is designed to be used as a CLI-driven template where developers can toggle features like authentication providers (Supabase, Clerk, etc.) and state management strategies during project initialization.",
+      overview:
+        "A comprehensive template for Expo applications that solves common architectural challenges out-of-the-box. It features a hardened route handler, seamless authentication flows and a curated set of UI components designed for both performance and aesthetic appeal.",
+      feature: [
+        {
+          title: "Integrated Supabase Auth:",
+          description:
+            "Pre-configured Supabase SSR authentication with secure session persistence, Redux-integrated auth state, and specialized hooks for easy access to user data.",
+        },
+        {
+          title: "Dynamic Route Protection:",
+          description:
+            "Implemented a sophisticated layout-based route guarding system using Expo Router, ensuring that internal application states are protected from unauthorized access.",
+        },
+        {
+          title: "Uniwind Styling Engine:",
+          description:
+            "Utilizes Uniwind (Tailwind CSS for React Native) to provide a highly flexible, utility-first styling system that supports both light and dark modes natively.",
+        },
+        {
+          title: "Performance-First Architecture:",
+          description:
+            "Built on the New Architecture with React Native 0.83+, utilizing MMKV for ultra-fast local storage and Redux Toolkit for predictable global state management.",
+        },
+      ],
+      whyIBuiltTitle:
+        "I created Minimal to solve the recurring overhead of setting up production-ready foundations for mobile applications, focusing on best practices in architecture and DX.",
+      whyIBuilt: [
+        {
+          description:
+            "To provide a standard boilerplate that bridges the gap between basic 'Hello World' templates and complex production requirements.",
+        },
+        {
+          description:
+            "To master the integration of Uniwind and React Native Reusables for creating high-end, responsive mobile interfaces.",
+        },
+        {
+          description:
+            "To implement a scalable authentication and data layer using Supabase that works seamlessly across iOS, Android, and Web.",
+        },
+        {
+          description:
+            "To explore advanced state management patterns combining Redux Toolkit for global data and MMKV for high-speed persistence.",
+        },
+        {
+          description:
+            "To create a modular foundation that can be easily extended into a CLI-driven project generator in the future.",
+        },
+      ],
+      futurePlans: [
+        {
+          description:
+            "Develop a custom CLI tool to allow users to interactively choose between multiple authentication providers (Clerk, Supabase, Firebase) during setup.",
+        },
+        {
+          description:
+            "Implement an automated testing suite using Jest and React Native Testing Library to ensure long-term stability of the template.",
+        },
+        {
+          description:
+            "Expand the library of pre-built UI components and sections specifically optimized for high-performance dashboard layouts.",
+        },
+        {
+          description:
+            "Add integrated support for real-time features and analytics to provide a truly 'all-in-one' starter experience.",
+        },
+      ],
+      images: [
+        "/projects/minimal/minimal-one.jpeg",
+        "/projects/minimal/minimal-two.jpeg",
+        "/projects/minimal/minimal-three.jpeg",
+        "/projects/minimal/minimal-four.jpeg",
       ],
     },
   },

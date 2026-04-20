@@ -5,6 +5,7 @@ import { DetailsLinkBtns, ViewAllProjectsButton } from "@/components/ui/projects
 import { ProjectItem } from "@/components/ui/projects/project-item";
 import { RouterBackBtn } from "@/components/ui/projects/router-back-btn";
 import { Timeline } from "@/components/ui/projects/timeline";
+import { ImageCarousel } from "@/components/ui/projects/image-carousel";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -86,6 +87,16 @@ export default async function Page({ params }: PageProps) {
 
           <p className="text-secondary tracking-wide">{project.details.overview}</p>
         </div>
+
+        {project.details.images && project.details.images.length > 0 && (
+          <div className="mt-6 sm:mt-10 flex flex-col items-center space-y-6">
+            <h2 className={`${hanken.className} text-xl sm:text-2xl font-semibold w-full text-left`}>
+              Image Gallery
+            </h2>
+
+            <ImageCarousel images={project.details.images} />
+          </div>
+        )}
 
         <div className="mt-6 sm:mt-10">
           <h2 className={`${hanken.className} mb-6 text-xl sm:text-2xl font-semibold`}>
