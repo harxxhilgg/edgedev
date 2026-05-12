@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { FooterBtn } from "../ui/main/body-btn";
 import { getVisitorId } from "@/lib/visitor";
 import { trackVisitor } from "@/app/actions";
-import { hanken } from "../fonts";
 
 export default function Footer() {
   const [visitorCount, setVisitorCount] = useState<number | null>(null);
@@ -40,7 +39,7 @@ export default function Footer() {
   }
 
   return (
-    <div className={`${hanken.className} text-secondary gap-1 sm:gap-0 mb-3 sm:mb-2 max-w-xl mx-auto px-4 py-3 rounded-lg`}>
+    <div className="text-secondary mb-3 sm:mb-2 max-w-xl mx-auto px-4 py-3 rounded-lg">
       <div className="flex flex-col justify-between items-center text-sm">
         <p className="tracking-wide text-center sm:text-left">
           © 2026 {" "}

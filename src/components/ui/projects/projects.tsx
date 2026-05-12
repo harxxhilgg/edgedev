@@ -53,14 +53,14 @@ export function Project() {
                           <Button
                             variant="ghost"
                             size="icon"
-                            className="text-secondary cursor-pointer"
+                            className="text-secondary cursor-pointer hover:bg-transparent"
                             onClick={(e) => {
                               e.preventDefault();
                               e.stopPropagation();
                               window.open(item.website, "_blank")
                             }}
                           >
-                            <GlobeSimpleIcon />
+                            <GlobeSimpleIcon style={{ height: 18, width: 18 }} />
                           </Button>
                         </TooltipTrigger>
 
@@ -76,14 +76,14 @@ export function Project() {
                           <Button
                             variant="ghost"
                             size="icon"
-                            className="text-secondary cursor-pointer"
+                            className="text-secondary cursor-pointer hover:bg-transparent"
                             onClick={(e) => {
                               e.preventDefault();
                               e.stopPropagation();
                               window.open(item.github, "_blank")
                             }}
                           >
-                            <GithubLogoIcon />
+                            <GithubLogoIcon style={{ height: 18, width: 18 }} />
                           </Button>
                         </TooltipTrigger>
 
@@ -98,7 +98,7 @@ export function Project() {
                 <p className="text-sm line-clamp-3 text-secondary tracking-wide">{item.description || null}</p>
 
                 <div>
-                  <h4 className="text-sm font-semibold text-secondary mt-4 mb-1">Technologies</h4>
+                  <h4 className="text-sm font-medium text-secondary mt-4 mb-1">Technologies</h4>
 
                   <div className="-ml-2 line-clamp-1 text-secondary">
                     {item.technologies.map((tech) => (
@@ -136,7 +136,7 @@ export function Project() {
                   >
                     <Button
                       variant="link"
-                      className="px-0 cursor-pointer text-secondary hover:text-primary"
+                      className="hover:no-underline px-0 cursor-pointer text-secondary hover:text-primary"
                     >
                       View Details
                       <ArrowRightIcon size={20} />
@@ -154,7 +154,7 @@ export function Project() {
                     className="w-full cursor-pointer text-secondary hover:text-primary mt-1"
                   >
                     View Details
-                    <ArrowRightIcon size={20} />
+                    <ArrowRightIcon />
                   </Button>
                 </Link>
               </div>

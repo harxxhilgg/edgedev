@@ -1,5 +1,5 @@
 import "./globals.css";
-import { geist } from "../components/fonts";
+import { hanken } from "../components/fonts";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geist.className} antialiased`}>
+      <body className={`${hanken.className} antialiased`}>
         <ThemeProvider attribute="class" enableSystem>
           <TooltipProvider>
             {children}

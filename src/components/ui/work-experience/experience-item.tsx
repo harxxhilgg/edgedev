@@ -48,7 +48,7 @@ export function ExperienceItem() {
                       />
                     }
                     url={item.website}
-                    label="Visit Website"
+                    label="Website"
                   />
 
                   <SocialButton

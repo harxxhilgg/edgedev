@@ -23,7 +23,7 @@ export function Timeline({ details, status }: { details: ProjectDetails; status:
       <div className="space-y-1 sm:space-y-0">
         <p className="text-sm text-secondary">Status</p>
         <Badge variant={`${status === "Live" ? "default" : "outline"}`} className="font-normal leading-tight">
-          {status === "Live" ? "Working" : "In Development"}
+          {status === "Live" ? "Working" : status === "Building" ? "In Development" : status === "Developed" ? "Developed" : "Not Specified"}
         </Badge>
       </div>
 

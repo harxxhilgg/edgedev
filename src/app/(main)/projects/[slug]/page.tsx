@@ -1,5 +1,4 @@
 import { projectData } from "@/components/data";
-import { hanken } from "@/components/fonts";
 import { Badge } from "@/components/ui/badge";
 import { DetailsLinkBtns, ViewAllProjectsButton } from "@/components/ui/projects/details-link-btns";
 import { ProjectItem } from "@/components/ui/projects/project-item";
@@ -46,7 +45,7 @@ export default async function Page({ params }: PageProps) {
 
       <div className="flex justify-start mt-4">
         <Badge variant={`${project.status === "Live" ? "default" : "outline"}`}>
-          {project.status === "Live" ? "Completed" : "In Development"}
+          {project.status === "Live" ? "Completed" : project.status === "Building" ? "In Development" : project.status === "Developed" ? "Developed" : "Not Specified"}
         </Badge>
       </div>
 
@@ -81,7 +80,7 @@ export default async function Page({ params }: PageProps) {
         </h2>
 
         <div className="mt-6 sm:mt-10">
-          <h2 className={`${hanken.className} mb-4 text-xl sm:text-2xl font-semibold`}>
+          <h2 className="mb-4 text-xl sm:text-2xl font-semibold">
             Overview
           </h2>
 
@@ -90,7 +89,7 @@ export default async function Page({ params }: PageProps) {
 
         {project.details.images && project.details.images.length > 0 && (
           <div className="mt-6 sm:mt-10 flex flex-col items-center space-y-6">
-            <h2 className={`${hanken.className} text-xl sm:text-2xl font-semibold w-full text-left`}>
+            <h2 className="text-xl sm:text-2xl font-semibold w-full text-left">
               Image Gallery
             </h2>
 
@@ -99,7 +98,7 @@ export default async function Page({ params }: PageProps) {
         )}
 
         <div className="mt-6 sm:mt-10">
-          <h2 className={`${hanken.className} mb-6 text-xl sm:text-2xl font-semibold`}>
+          <h2 className="mb-6 text-xl sm:text-2xl font-semibold">
             What Users Can Do
           </h2>
 
@@ -122,7 +121,7 @@ export default async function Page({ params }: PageProps) {
 
         {hasWhyIBuiltThis && (
           <div className="mt-6 sm:mt-10 space-y-4">
-            <h2 className={`${hanken.className} mb-4 text-xl sm:text-2xl font-semibold`}>
+            <h2 className="mb-4 text-xl sm:text-2xl font-semibold">
               Why I Built This
             </h2>
 
@@ -143,7 +142,7 @@ export default async function Page({ params }: PageProps) {
         )}
 
         <div className="mt-6 sm:mt-10 space-y-4">
-          <h2 className={`${hanken.className} mb-4 text-xl sm:text-2xl font-semibold`}>
+          <h2 className="mb-4 text-xl sm:text-2xl font-semibold">
             Tech Stack
           </h2>
 
@@ -162,7 +161,7 @@ export default async function Page({ params }: PageProps) {
 
         {hasFuturePlans && (
           <div className="mt-6 sm:mt-10 space-y-4">
-            <h2 className={`${hanken.className} mb-4 text-xl sm:text-2xl font-semibold`}>
+            <h2 className="mb-4 text-xl sm:text-2xl font-semibold">
               Future Plans
             </h2>
 

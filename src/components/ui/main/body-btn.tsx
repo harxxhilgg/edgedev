@@ -8,10 +8,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import Link from "next/link";
-import { FileUser, Mail, Send } from "lucide-react";
 import { socials, techData } from "@/components/data";
-import { FiGithub } from "react-icons/fi";
-import { FaLinkedinIn } from "react-icons/fa";
+import { EnvelopeSimpleIcon, GithubLogoIcon, LinkedinLogoIcon, PaperPlaneTiltIcon, ReadCvLogoIcon } from "@phosphor-icons/react";
 
 type Props = {
   tech: string;
@@ -27,7 +25,7 @@ export function BodyBtn({ tech }: Props) {
       <TooltipTrigger asChild>
         <Button
           variant="outline"
-          className="text-xs border-dashed font-semibold px-2 h-6 rounded-lg text-black dark:text-white bg-zinc-50 dark:bg-zinc-800 dark:hover:bg-zinc-900"
+          className="text-[13px] border-dashed font-semibold px-2 h-6 rounded-lg text-black dark:text-white bg-zinc-50 dark:bg-zinc-800 dark:hover:bg-zinc-900 cursor-pointer"
           onClick={() => window.open(item.url, "_blank")}
         >
           <Image
@@ -43,7 +41,7 @@ export function BodyBtn({ tech }: Props) {
       </TooltipTrigger>
 
       <TooltipContent>
-        <p className="font-semibold">{item.tech}</p>
+        <p>{item.tech}</p>
       </TooltipContent>
     </Tooltip>
   );
@@ -59,7 +57,7 @@ export function TechStackBtn({ tech }: Props) {
       <TooltipTrigger asChild>
         <Button
           variant="ghost"
-          className="text-xs font-semibold p-0 h-10 w-10 hover:bg-black/5 hover:dark:bg-white/10"
+          className="text-xs font-semibold p-0 h-10 w-10 hover:bg-black/5 hover:dark:bg-white/10 cursor-pointer"
           onClick={() => window.open(item.url, "_blank")}
         >
           <Image
@@ -79,11 +77,11 @@ export function TechStackBtn({ tech }: Props) {
         </Button>
       </TooltipTrigger>
 
-      <TooltipContent className="inline-flex gap-1">
-        <p className="font-semibold">{item.tech}</p>
+      <TooltipContent className="inline-flex gap-1 text-sm font-semibold">
+        <p>{item.tech}</p>
 
         {item.techDescription && (
-          <p className="font-semibold">({item.techDescription})</p>
+          <p>({item.techDescription})</p>
         )}
       </TooltipContent>
     </Tooltip>
@@ -95,14 +93,14 @@ export function ResumeShareBtn() {
     <>
       <Button variant="outline" className="cursor-pointer" asChild>
         <Link href="/resume">
-          <FileUser size={15} className="rotate-6" />
+          <ReadCvLogoIcon style={{ height: 19, width: 19 }} />
           Resume / CV
         </Link>
       </Button>
 
       <Button variant="ghost" className="cursor-pointer" asChild>
         <Link href="/get-in-touch">
-          <Send size={15} />
+          <PaperPlaneTiltIcon style={{ height: 18, width: 18 }} />
           Get in Touch
         </Link>
       </Button>
@@ -118,10 +116,10 @@ export function SocialBtns() {
           <Button
             variant="ghost"
             size="icon"
-            className="text-secondary cursor-pointer"
+            className="text-secondary cursor-pointer hover:bg-transparent"
             onClick={() => window.open(socials.github, "_blank")}
           >
-            <FiGithub color="currentColor" />
+            <GithubLogoIcon style={{ height: 20, width: 20 }} />
           </Button>
         </TooltipTrigger>
 
@@ -135,10 +133,10 @@ export function SocialBtns() {
           <Button
             variant="ghost"
             size="icon"
-            className="text-secondary cursor-pointer"
+            className="text-secondary cursor-pointer hover:bg-transparent -ml-0.5"
             onClick={() => window.open(socials.linkedin, "_blank")}
           >
-            <FaLinkedinIn color="currentColor" />
+            <LinkedinLogoIcon style={{ height: 22, width: 22 }} />
           </Button>
         </TooltipTrigger>
 
@@ -152,10 +150,10 @@ export function SocialBtns() {
           <Button
             variant="ghost"
             size="icon"
-            className="text-secondary cursor-pointer"
+            className="text-secondary cursor-pointer hover:bg-transparent"
           >
             <a href={`mailto:${socials.email}`} aria-label="Mail">
-              <Mail color="currentColor" />
+              <EnvelopeSimpleIcon style={{ height: 24, width: 24 }} />
             </a>
           </Button>
         </TooltipTrigger>
@@ -189,7 +187,7 @@ export function ProjectsNoteBtn() {
       <Button
         variant="link"
         size="sm"
-        className="text-sm font-semibold text-muted-foreground cursor-pointer h-0 p-0 underline hover:text-primary"
+        className="text-sm underline text-muted-foreground cursor-pointer h-0 p-0 hover:text-primary"
       >
         contact page
       </Button>
@@ -207,7 +205,7 @@ export function ProjectTechStackBtn({ tech }: Props) {
       <TooltipTrigger asChild>
         <Button
           variant="ghost"
-          className="text-xs font-semibold p-0 h-10 w-10 hover:bg-black/5 hover:dark:bg-white/10"
+          className="text-xs font-semibold p-0 h-10 w-10 cursor-pointer"
           onClick={() => window.open(item.url, "_blank")}
         >
           <Image
@@ -222,7 +220,7 @@ export function ProjectTechStackBtn({ tech }: Props) {
       </TooltipTrigger>
 
       <TooltipContent>
-        <p className="font-semibold">{item.tech}</p>
+        <p>{item.tech}</p>
       </TooltipContent>
     </Tooltip>
   );

@@ -7,7 +7,7 @@ export function Experience() {
   return (
     <>
       {homeExperienceData.map((item) => (
-        <div key={item.id} className="flex justify-between items-center mb-3">
+        <div key={item.id} className="flex justify-between items-center mb-4">
           <div className="flex items-center gap-3">
             <div>
               <Image
@@ -15,20 +15,20 @@ export function Experience() {
                 alt={item.alt}
                 height={40}
                 width={40}
-                className="border border-black/10 rounded-md"
+                className="border border-black/10 rounded-sm"
               />
             </div>
 
             <div>
-              <p className="font-semibold text-sm">{item.company}</p>
-              <p className="font-semibold text-xs text-secondary">
+              <p className="font-bold text-[15px]">{item.company}</p>
+              <p className="font-normal text-sm text-secondary">
                 {item.role}
               </p>
             </div>
           </div>
 
           <div>
-            <div className="text-xs text-right text-secondary space-y-[0.1px]">
+            <div className="text-sm text-right text-secondary tracking-wide space-y-[0.1px]">
               <p>
                 {item.startDate} - {item.endDate}
               </p>
@@ -41,7 +41,7 @@ export function Experience() {
       ))}
 
       <div className="flex mt-8 justify-center">
-        <Button variant="outline" size="sm" asChild className="cursor-pointer">
+        <Button variant="outline" size="default" asChild className="cursor-pointer rounded-xl">
           <Link href="/work-experience">
             Show all work experiences
           </Link>

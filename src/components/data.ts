@@ -195,6 +195,11 @@ export const techData: TechItem[] = [
     url: "https://supabase.com",
     icon: "/supabase-icon.svg",
   },
+  {
+    tech: "Redis",
+    url: "https://redis.io",
+    icon: "/redis-icon.svg",
+  },
 ];
 
 export type homeExperienceItem = {
@@ -216,8 +221,8 @@ export const homeExperienceData: homeExperienceItem[] = [
     alt: "IT Futurz Icon",
     company: "IT Futurz",
     role: "React Native Developer Intern",
-    startDate: "Aug 2025",
-    endDate: "Oct 2025",
+    startDate: "August 2025",
+    endDate: "October 2025",
     location: "Surat, India",
     jobType: "On Site",
   },
@@ -228,7 +233,7 @@ export const homeExperienceData: homeExperienceItem[] = [
     company: "ByteXL",
     role: "Frontend Intern",
     startDate: "May 2024",
-    endDate: "Jul 2024",
+    endDate: "July 2024",
     location: "Vadodara, India",
     jobType: "On Site",
   },
@@ -265,8 +270,8 @@ export const experienceData: ExperienceItem[] = [
     role: "React Native Intern",
     website: "https://itfuturz.in/",
     linkedin: "https://www.linkedin.com/company/it-futurz/",
-    startDate: "Aug 2025",
-    endDate: "Oct 2025",
+    startDate: "August 2025",
+    endDate: "October 2025",
     location: "Surat, India",
     jobType: "On Site",
     technologies: [
@@ -301,7 +306,7 @@ export const experienceData: ExperienceItem[] = [
     website: "https://www.bytexl.com/",
     linkedin: "https://www.linkedin.com/company/bytexl/",
     startDate: "May 2024",
-    endDate: "Jul 2024",
+    endDate: "July 2024",
     location: "Vadodara, India",
     jobType: "On Site",
     technologies: [
@@ -645,6 +650,7 @@ export const projectData: ProjectItem[] = [
       "Tailwind CSS",
       "Gemini",
       "Prisma",
+      "Redis",
       "Supabase",
       "Redux Toolkit",
       "Framer Motion",
@@ -748,7 +754,7 @@ export const projectData: ProjectItem[] = [
       "Uniwind",
       "Supabase",
       "Redux Toolkit",
-      "MMKV",
+      "MMKV (Fastest Key-Value Storage for Mobile Applications)",
     ],
     details: {
       description:
@@ -847,4 +853,64 @@ export const aboutMeTech = [
   "Vite",
   "Node.js",
   "PostgreSQL",
+];
+
+export type DetailedTechStackItem = string;
+
+export const languagesTechStack: DetailedTechStackItem[] = [
+  "JavaScript",
+  "TypeScript",
+  "SQL",
+];
+
+export const frontendTechStack: DetailedTechStackItem[] = [
+  "React",
+  "Next.js",
+  "Vite",
+  "shadcn/ui",
+  "Tailwind CSS",
+];
+
+// ----------------------------- //
+
+export const mobileTechStack: DetailedTechStackItem[] = [
+  "React Native",
+  "Expo",
+  "Nativewind",
+];
+
+export const backendTechStack: DetailedTechStackItem[] = [
+  "Node.js",
+  "Express.js",
+];
+
+export const dbORMTechStack: DetailedTechStackItem[] = [
+  "PostgreSQL",
+  "MongoDB",
+  "Redis",
+  "Prisma",
+  "Supabase",
+];
+
+export const testingTechStack: DetailedTechStackItem[] = [
+  "React Testing Library",
+  "Postman",
+];
+
+export const devOpsTechStack: DetailedTechStackItem[] = [
+  "Docker",
+  "Vercel",
+  "Google Cloud Console",
+];
+
+export const versionControlTechStack: DetailedTechStackItem[] = [
+  "Git",
+  "GitHub",
+];
+
+export const designContentTechStack: DetailedTechStackItem[] = ["Figma", "MDX"];
+
+export const developmentEnvironemnt: DetailedTechStackItem[] = [
+  "VS Code",
+  "Linux",
 ];

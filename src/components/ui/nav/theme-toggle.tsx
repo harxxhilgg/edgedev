@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { CircleHalfIcon } from "@phosphor-icons/react";
 import {
   Tooltip,
   TooltipContent,
@@ -18,10 +18,12 @@ export function ThemeToggle() {
         <Button
           variant="ghost"
           size="icon"
-          className="rounded-md active:scale-95 h-7 w-7 cursor-pointer"
+          className="rounded-full cursor-pointer active:scale-90"
           onClick={() => setTheme(isDark ? "light" : "dark")}
         >
-          {isDark ? <Sun size={14} /> : <Moon size={14} />}
+          <div className={`transition-all duration-300 ${isDark ? "rotate-0 opacity-85" : "rotate-180"}`}>
+            <CircleHalfIcon style={{ height: 19, width: 19 }} />
+          </div>
         </Button>
       </TooltipTrigger>
 

@@ -14,6 +14,10 @@ import { TechStack } from "@/components/ui/main/tech-stack";
 import { ReactNode } from "react";
 import { Experience } from "./experience";
 import { AboutMe } from "./about-me";
+import { Link as LinkIcon } from "lucide-react";
+import Link from "next/link";
+import { Button } from "../button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../tooltip";
 
 export function HomeContent({ children }: { children?: ReactNode }) {
   return (
@@ -25,7 +29,7 @@ export function HomeContent({ children }: { children?: ReactNode }) {
       <section aria-labelledby="intro-heading">
         <h1
           id="intro-heading"
-          className="mt-2 mb-7 flex flex-wrap items-center space-x-2 text-[23px] sm:text-2xl font-semibold tracking-normal"
+          className="mt-2 mb-7 flex flex-wrap items-center space-x-2 text-[23px] sm:text-2xl font-bold tracking-wide"
         >
           <span>Hi, I&apos;m Harshil</span>{" "}
           <span className="hidden sm:block">—</span>
@@ -48,7 +52,7 @@ export function HomeContent({ children }: { children?: ReactNode }) {
           </span>
         </h1>
 
-        <p className="leading-loose sm:leading-[2.3] tracking-wider text-black/70 dark:text-white/70">
+        <p className="leading-loose tracking-wide text-black/70 dark:text-white/70">
           I build interactive mobile apps and web apps using
           <span className="ml-0 sm:ml-2">{<BodyBtn tech="TypeScript" />} ,</span>
           <span> {<BodyBtn tech="Next.js" />} ,</span>
@@ -82,12 +86,33 @@ export function HomeContent({ children }: { children?: ReactNode }) {
         aria-labelledby="tech-stack-heading"
         className="mt-5 sm:mt-6"
       >
-        <h2
-          id="tech-stack-heading"
-          className="text-xl font-semibold mb-4"
-        >
-          Stack
-        </h2>
+        <div className="group flex flex-row items-center mb-4">
+          <h2
+            id="tech-stack-heading"
+            className="text-[22px] font-bold"
+          >
+            Stack
+          </h2>
+
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Link href="/tech">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="cursor-pointer opacity-50 transition-opacity duration-100 group-hover:opacity-100 text-secondary hover:text-primary hover:bg-transparent"
+                >
+                  <LinkIcon style={{ height: 16, width: 16 }} />
+                </Button>
+              </Link>
+            </TooltipTrigger>
+
+            <TooltipContent>
+              <p>View Detailed Tech-Stack</p>
+            </TooltipContent>
+          </Tooltip>
+        </div>
+
         <TechStack />
       </section>
 
@@ -97,7 +122,7 @@ export function HomeContent({ children }: { children?: ReactNode }) {
       >
         <h2
           id="experience-heading"
-          className="text-xl mb-4 font-semibold"
+          className="text-[22px] font-bold mb-4"
         >
           Experience
         </h2>
@@ -108,11 +133,11 @@ export function HomeContent({ children }: { children?: ReactNode }) {
         aria-labelledby="about-me-heading"
         className="mt-5 sm:mt-6"
       >
-        <p className="text-sm text-secondary tracking-wide">About</p>
+        <p className="text-secondary">About</p>
 
         <h2
           id="about-me-heading"
-          className="text-xl font-semibold tracking-wide"
+          className="text-[22px] font-bold"
         >
           Me
         </h2>

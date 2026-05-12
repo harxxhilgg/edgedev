@@ -34,7 +34,7 @@ export default function Page() {
           Some projects may take time to work due to API build processes, paused databases, or services waking up.
           If you notice any issues, you can let me know via the{" "}
           <ProjectsNoteBtn />
-          {" "}and I’ll look into it.
+          {" "}and I&apos;ll look into it.
         </span>
       </p>
     </motion.div>

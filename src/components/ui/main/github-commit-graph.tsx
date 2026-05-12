@@ -63,7 +63,7 @@ async function CommitGraphContent() {
     return (
       <div className="space-y-4">
         <section aria-labelledby="activity-heading" className="flex items-center">
-          <h2 id="activity-heading" className="text-xl font-semibold">GitHub Activity</h2>
+          <h2 id="activity-heading" className="text-[22px] font-bold">GitHub Activity</h2>
         </section>
 
         <div className="px-4 py-3 rounded-lg bg-black/5 dark:bg-white/5">

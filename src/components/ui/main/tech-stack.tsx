@@ -2,7 +2,7 @@ import { TechStackBtn } from "./body-btn";
 
 export function TechStack() {
   return (
-    <div className="transition-all flex flex-wrap gap-1 p-3 rounded-lg bg-black/5 dark:bg-white/5">
+    <div className="transition-all flex flex-wrap justify-center gap-1 p-3 rounded-lg bg-primary/5 ">
       {/* Languages */}
       <TechStackBtn tech="TypeScript" />
       <TechStackBtn tech="JavaScript" />
@@ -27,6 +27,7 @@ export function TechStack() {
       <TechStackBtn tech="PostgreSQL" />
       <TechStackBtn tech="MongoDB" />
       <TechStackBtn tech="Supabase" />
+      <TechStackBtn tech="Redis" />
       <TechStackBtn tech="Prisma" />
 
       {/* Testing */}
@@ -39,7 +40,6 @@ export function TechStack() {
       <TechStackBtn tech="Docker" />
       <TechStackBtn tech="Git" />
       <TechStackBtn tech="GitHub" />
-      <TechStackBtn tech="npm" />
       <TechStackBtn tech="Figma" />
       <TechStackBtn tech="Google Cloud Console" />
 

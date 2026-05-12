@@ -22,21 +22,21 @@ import {
   InputGroupTextarea,
 } from "../input-group";
 import { Button } from "../button";
-import { RotateCcw, Send, ShieldCheck } from "lucide-react";
-import { useState } from "react";
 import { BsExclamationCircle } from "react-icons/bs";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "../tooltip";
+import { sendContactMessage } from "@/app/actions";
+import { ArrowCounterClockwiseIcon, PaperPlaneTiltIcon, ShieldStarIcon } from "@phosphor-icons/react";
 
 const contactFormSchema = z.object({
   name: z
     .string()
     .min(3, "Name must be at least 3 characters.")
     .max(20, "Name must be at most 20 characters."),
-  phone: z.string().max(10).optional().or(z.literal("")),
+  phone: z.string().max(15).optional().or(z.literal("")),
   email: z.email({ message: "Invalid email address." }),
   message: z
     .string()
@@ -45,9 +45,12 @@ const contactFormSchema = z.object({
 });
 
 export function ContactForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const form = useForm<z.infer<typeof contactFormSchema>>({
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState: { isSubmitting },
+  } = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     mode: "onSubmit",
     defaultValues: {
@@ -58,42 +61,31 @@ export function ContactForm() {
     },
   });
 
-  async function onSubmit(data: z.infer<typeof contactFormSchema>) {
-    setIsSubmitting(true);
+  const onSubmit = async (
+    data: z.infer<typeof contactFormSchema>
+  ) => {
+    toast.promise(
+      sendContactMessage(data),
+      {
+        loading: "Sending message...",
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+        success: () => {
+          reset();
+
+          return "Message sent successfully!";
         },
-        body: JSON.stringify(data),
-      });
 
-      const result = await response.json();
+        error: (error) => {
+          return (
+            error.message ||
+            "Failed to send message!"
+          );
+        },
 
-      if (response.ok) {
-        toast.success("Message sent successfully!", {
-          description:
-            "Thank you for reaching out. I\'ll get back to you soon.",
-        });
-
-        form.reset();
-      } else {
-        toast.error("Failed to send message", {
-          description: result.error || "Please try again later.",
-        });
+        closeButton: true,
       }
-    } catch (error) {
-      console.error("Submissions error: ", error);
-
-      toast.error("Network error", {
-        description: "Unable to send message. Check your connection.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  }
+    );
+  };
 
   return (
     <Card className="w-full border-transparent bg-transparent shadow-none transition-all">
@@ -107,12 +99,12 @@ export function ContactForm() {
       </CardHeader>
 
       <CardContent className="p-4">
-        <form id="form-rhf-contact" onSubmit={form.handleSubmit(onSubmit)}>
+        <form id="form-rhf-contact" onSubmit={handleSubmit(onSubmit)}>
           <FieldGroup>
             <div className="flex flex-col gap-7 md:flex-row md:justify-around md:gap-14">
               <Controller
                 name="name"
-                control={form.control}
+                control={control}
                 render={({ field, fieldState }) => (
                   <Field data-invalid={fieldState.invalid}>
                     <FieldLabel htmlFor="form-rhf-name" className="gap-0.5">
@@ -137,7 +129,7 @@ export function ContactForm() {
 
               <Controller
                 name="phone"
-                control={form.control}
+                control={control}
                 render={({ field, fieldState }) => (
                   <Field data-invalid={fieldState.invalid}>
                     <FieldLabel
@@ -153,9 +145,9 @@ export function ContactForm() {
                       id="form-rhf-phone"
                       type="number"
                       aria-invalid={fieldState.invalid}
-                      placeholder="+91 (123)xx-xxxxx"
+                      placeholder="+91 (123)XX-XXXXX"
                       autoComplete="off"
-                      className="bg-input/30 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                      className="bg-input/30 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none placeholder:tracking-wide"
                     />
 
                     {fieldState.invalid && (
@@ -168,7 +160,7 @@ export function ContactForm() {
 
             <Controller
               name="email"
-              control={form.control}
+              control={control}
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
                   <FieldLabel htmlFor="form-rhf-email" className="gap-0.5">
@@ -193,7 +185,7 @@ export function ContactForm() {
 
                         <TooltipContent>
                           <div className="py-0.5 inline-flex items-center gap-1">
-                            <ShieldCheck size={16} />
+                            <ShieldStarIcon size={18} />
                             <p className="text-sm">Your email is safe</p>
                           </div>
                         </TooltipContent>
@@ -210,7 +202,7 @@ export function ContactForm() {
 
             <Controller
               name="message"
-              control={form.control}
+              control={control}
               render={({ field, fieldState }) => (
                 <Field data-invalid={fieldState.invalid}>
                   <FieldLabel htmlFor="form-rhf-message" className="gap-0.5">
@@ -228,7 +220,7 @@ export function ContactForm() {
                     />
 
                     <InputGroupAddon align="block-end">
-                      <InputGroupText>
+                      <InputGroupText className="tracking-wide">
                         {field.value.length}/300 characters
                       </InputGroupText>
                     </InputGroupAddon>
@@ -249,19 +241,19 @@ export function ContactForm() {
           <Button
             type="button"
             variant="outline"
-            onClick={() => form.reset()}
-            className="text-secondary cursor-pointer"
+            onClick={() => reset()}
+            className="text-secondary cursor-pointer rounded-xl"
           >
-            <RotateCcw /> Reset
+            <ArrowCounterClockwiseIcon /> Reset
           </Button>
 
           <Button
             type="submit"
             form="form-rhf-contact"
-            className="cursor-pointer"
+            className="cursor-pointer rounded-xl"
             disabled={isSubmitting}
           >
-            <Send /> Submit
+            <PaperPlaneTiltIcon /> Submit
           </Button>
         </Field>
       </CardFooter>
