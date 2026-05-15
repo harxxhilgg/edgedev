@@ -1,15 +1,8 @@
 import { experienceData } from "@/components/data";
-import {
-  Facebook,
-  Globe,
-  Instagram,
-  Linkedin,
-  Twitter,
-  Youtube,
-} from "lucide-react";
 import { SocialButton } from "./social-btns";
 import { BodyBtn } from "../main/body-btn";
 import { Separator } from "@/components/ui/separator";
+import { FacebookLogoIcon, GlobeSimpleIcon, InstagramLogoIcon, LinkedinLogoIcon, XLogoIcon, YoutubeLogoIcon } from "@phosphor-icons/react";
 
 export function ExperienceItem() {
   // const totalExperiences = experienceData.length;
@@ -43,9 +36,8 @@ export function ExperienceItem() {
 
                   <SocialButton
                     icon={
-                      <Globe
-                        color="currentColor"
-                        style={{ height: 14, width: 14 }}
+                      <GlobeSimpleIcon
+                        style={{ height: 16, width: 16 }}
                       />
                     }
                     url={item.website}
@@ -54,9 +46,8 @@ export function ExperienceItem() {
 
                   <SocialButton
                     icon={
-                      <Linkedin
-                        color="currentColor"
-                        style={{ height: 14, width: 14 }}
+                      <LinkedinLogoIcon
+                        style={{ height: 16, width: 16 }}
                       />
                     }
                     url={item.linkedin}
@@ -66,9 +57,8 @@ export function ExperienceItem() {
                   {item.twitter && (
                     <SocialButton
                       icon={
-                        <Twitter
-                          color="currentColor"
-                          style={{ height: 14, width: 14 }}
+                        <XLogoIcon
+                          style={{ height: 16, width: 16 }}
                         />
                       }
                       url={item.twitter}
@@ -79,9 +69,8 @@ export function ExperienceItem() {
                   {item.instagram && (
                     <SocialButton
                       icon={
-                        <Instagram
-                          color="currentColor"
-                          style={{ height: 14, width: 14 }}
+                        <InstagramLogoIcon
+                          style={{ height: 16, width: 16 }}
                         />
                       }
                       url={item.instagram}
@@ -92,9 +81,8 @@ export function ExperienceItem() {
                   {item.facebook && (
                     <SocialButton
                       icon={
-                        <Facebook
-                          color="currentColor"
-                          style={{ height: 14, width: 14 }}
+                        <FacebookLogoIcon
+                          style={{ height: 16, width: 16 }}
                         />
                       }
                       url={item.facebook}
@@ -105,9 +93,8 @@ export function ExperienceItem() {
                   {item.youtube && (
                     <SocialButton
                       icon={
-                        <Youtube
-                          color="currentColor"
-                          style={{ height: 14, width: 14 }}
+                        <YoutubeLogoIcon
+                          style={{ height: 16, width: 16 }}
                         />
                       }
                       url={item.youtube}
