@@ -1,13 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ThemeToggleClient } from "./theme-toggle-client";
 import Link from "next/link";
-import Image from "next/image";
-import { Separator } from "../separator";
 
 export default function TopNav() {
   return (
-    <div className="flex items-center justify-between h-18 sm:h-20 px-4 py-3 sm:py-4 sm:px-2 select-none transition-all">
-      <Link href="/" className="active:scale-95 transition-all">
+    <div className="flex items-center justify-between h-18 px-2 sm:px-0 py-3 sm:py-4s select-none transition-all">
+      {/* <Link href="/" className="active:scale-95 transition-all">
         <Image
           src="/profile-icon-y.png"
           alt="Profile Icon"
@@ -16,28 +14,36 @@ export default function TopNav() {
           className="rounded-lg w-11.5 h-11.5 sm:w-11.5 sm:h-11.5 border border-secondary"
           loading="eager"
         />
-      </Link>
+      </Link> */}
 
-      <div className="flex items-center">
-        <div className="mr-1 -space-x-1">
-          <Button variant="link" className="cursor-pointer text-[15px]" asChild>
-            <Link href="/work-experience">Work</Link>
+      <div className="flex items-center -space-x-1">
+        <Link href="/">
+          <Button variant="link" className="cursor-pointer text-secondary hover:text-primary hover:no-underline">
+            Home
           </Button>
+        </Link>
 
-          <Button variant="link" className="cursor-pointer text-[15px]" asChild>
-            <Link href="/projects">Projects</Link>
+        <Link href="/work-experience">
+          <Button variant="link" className="cursor-pointer text-secondary hover:text-primary hover:no-underline">
+            Work
           </Button>
+        </Link>
 
-          <Button variant="link" className="cursor-pointer text-[15px]" asChild>
-            <Link href="/resume">Resume</Link>
+        <Link href="/projects">
+          <Button variant="link" className="cursor-pointer text-secondary hover:text-primary hover:no-underline">
+            Projects
           </Button>
-        </div>
+        </Link>
 
-        <Separator orientation="vertical" className="h-5" />
+        <Link href="/resume">
+          <Button variant="link" className="cursor-pointer text-secondary hover:text-primary hover:no-underline">
+            Resume
+          </Button>
+        </Link>
+      </div>
 
-        <div className="flex items-center ml-2">
-          <ThemeToggleClient />
-        </div>
+      <div className="flex items-center ml-2">
+        <ThemeToggleClient />
       </div>
     </div>
   );

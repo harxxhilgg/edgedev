@@ -1,5 +1,4 @@
 import { experienceData } from "@/components/data";
-import Image from "next/image";
 import {
   Facebook,
   Globe,
@@ -10,31 +9,33 @@ import {
 } from "lucide-react";
 import { SocialButton } from "./social-btns";
 import { BodyBtn } from "../main/body-btn";
+import { Separator } from "@/components/ui/separator";
 
 export function ExperienceItem() {
-  const totalExperiences = experienceData.length;
+  // const totalExperiences = experienceData.length;
 
   return (
     <>
-      <div className="flex gap-1.5 mt-2 mb-6">
+      {/* <div className="flex gap-1.5 mt-2 mb-6">
         <h2 className="text-xl font-semibold">All Experiences</h2>
 
         <p className="text-sm text-secondary pt-1.5">
           ({totalExperiences} experiences)
         </p>
-      </div>
+      </div> */}
 
       {experienceData.map((item) => (
         <div key={item.id} className="mb-8">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2.5">
-              <Image
+              {/* Uncomment if want to see logo of the company */}
+              {/* <Image
                 src={item.icon}
                 alt={item.alt}
                 height={46}
                 width={46}
                 className="border border-black/10 rounded-md select-none"
-              />
+              /> */}
 
               <div>
                 <div className="flex items-center">
@@ -131,7 +132,9 @@ export function ExperienceItem() {
             </div>
           </div>
 
-          <div className="mt-3 space-y-3">
+          <Separator orientation="horizontal" className="my-3" />
+
+          <div className="space-y-3">
             <h3 className="font-medium text-[15px] mb-2">
               Technologies & Tools
             </h3>
@@ -143,8 +146,10 @@ export function ExperienceItem() {
             </div>
           </div>
 
-          <div className="mt-4 px-3 sm:px-4 transition-all">
-            <ul className="list-disc list-outside space-y-1 text-sm text-secondary tracking-wide">
+          <div className="mt-4 transition-all">
+            <b className="text-[15px]">What I&apos;ve done</b>
+
+            <ul className="list-disc list-outside space-y-1 text-sm text-secondary tracking-wide px-3 sm:px-4 mt-1.5">
               {item.responsibilities.map((resp, index) => (
                 <li key={index}>{resp}</li>
               ))}

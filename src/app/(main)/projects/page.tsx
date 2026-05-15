@@ -2,7 +2,6 @@
 
 import { ProjectsNoteBtn } from "@/components/ui/main/body-btn";
 import { Project } from "@/components/ui/projects/projects";
-import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 
 export default function Page() {
@@ -13,19 +12,14 @@ export default function Page() {
       className="w-full py-6 px-4 sm:px-0 transition-all"
     >
       <section aria-labelledby="projects-heading">
-        <h1
-          id="projects-heading"
-          className="mt-4 sm:mt-10 text-center gap-x-2 text-3xl sm:text-4xl font-semibold tracking-tight"
-        >
+        <h1 id="projects-heading" className="mt-4 sm:mt-10 text-center gap-x-2 text-2xl sm:text-3xl font-semibold tracking-tight">
           Projects
         </h1>
       </section>
 
-      <p className="mt-4 mx-10 sm:mx-0 text-center text-secondary transition-all">
+      <p className="mt-4 mb-14 mx-10 sm:mx-0 text-center text-secondary transition-all">
         My projects and work across different technologies and domains.
       </p>
-
-      <Separator orientation="horizontal" className="my-10" />
 
       <Project />
 

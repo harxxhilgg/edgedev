@@ -1,6 +1,5 @@
 "use client";
 
-import { Separator } from "@/components/ui/separator";
 import { ExperienceItem } from "@/components/ui/work-experience/experience-item";
 import { motion } from "framer-motion";
 
@@ -12,15 +11,13 @@ export default function Page() {
       className="w-full py-6 px-4 sm:px-0 transition-all"
     >
       <section aria-labelledby="work-experience-header">
-        <h1 id="work-experience-header" className="mt-4 sm:mt-10 text-center gap-x-2 text-3xl sm:text-4xl font-semibold tracking-tight">
+        <h1 id="work-experience-header" className="mt-4 sm:mt-10 text-center gap-x-2 text-2xl sm:text-3xl font-semibold tracking-tight">
           Work Experience
         </h1>
 
-        <p id="work-experience-description" className="mt-4 mx-10 sm:mx-0 text-center text-secondary transition-all">
+        <p id="work-experience-description" className="mt-4 mb-14 mx-10 sm:mx-0 text-center text-secondary transition-all">
           My work experience across different companies and roles.
         </p>
-
-        <Separator orientation="horizontal" className="my-10" />
 
         <ExperienceItem />
       </section>

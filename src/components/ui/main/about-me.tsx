@@ -7,12 +7,24 @@ export function AboutMe() {
     <>
       <div className="block sm:flex py-4 gap-7 transition-all">
         <div className="sm:shrink-0">
+          {/* For dark-theme */}
           <Image
-            src="/profile-icon-y.png"
+            src="/profile-icon.png"
             alt="Profile Icon"
             height={250}
             width={250}
-            className="rounded-lg sm:rounded-xl h-55 w-55 sm:h-62.5 sm:w-62.5 transition-all border border-black/15 dark:border-white/15 select-none"
+            loading="eager"
+            className="hidden dark:block rounded-lg sm:rounded-xl h-55 w-55 sm:h-62.5 sm:w-62.5 transition-all border border-black/15 dark:border-white/15 select-none"
+          />
+
+          {/* For light-theme */}
+          <Image
+            src="/profile-icon-b.png"
+            alt="Profile Icon"
+            height={250}
+            width={250}
+            loading="eager"
+            className="block dark:hidden rounded-lg sm:rounded-xl h-55 w-55 sm:h-62.5 sm:w-62.5 transition-all border border-black/15 dark:border-white/15 select-none"
           />
         </div>
 

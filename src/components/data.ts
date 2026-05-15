@@ -1,9 +1,25 @@
 import React from "react";
 
-export const socials = {
+type SocialItem = {
+  github: string;
+  linkedin: string;
+  email: string;
+  twitter: string;
+  instagram: string;
+  linktree: string;
+  steam: string;
+  ytmusic: string;
+};
+
+export const socials: SocialItem = {
   github: "https://github.com/harxxhilgg/",
   linkedin: "https://www.linkedin.com/in/harxxhilgg/",
   email: "harshilp046@gmail.com",
+  twitter: "https://x.com/harxxhilop",
+  instagram: "https://www.instagram.com/harshildrowns/",
+  linktree: "https://linktr.ee/harxxhil.gg",
+  steam: "https://steamcommunity.com/id/harxxhilgg/",
+  ytmusic: "https://music.youtube.com/@harshilsdeath",
 };
 
 export type TechItem = {
@@ -870,8 +886,6 @@ export const frontendTechStack: DetailedTechStackItem[] = [
   "shadcn/ui",
   "Tailwind CSS",
 ];
-
-// ----------------------------- //
 
 export const mobileTechStack: DetailedTechStackItem[] = [
   "React Native",
