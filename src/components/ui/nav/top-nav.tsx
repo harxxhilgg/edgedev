@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ThemeToggleClient } from "./theme-toggle-client";
 import Link from "next/link";
+import { AnimatedThemeToggler } from "../animated-theme-toggler";
+// import { ThemeToggleClient } from "./theme-toggle-client";
 
 export default function TopNav() {
   return (
@@ -42,8 +43,9 @@ export default function TopNav() {
         </Link>
       </div>
 
-      <div className="flex items-center ml-2">
-        <ThemeToggleClient />
+      <div className="flex items-center pr-8">
+        {/* <ThemeToggleClient /> */}
+        <AnimatedThemeToggler />
       </div>
     </div>
   );

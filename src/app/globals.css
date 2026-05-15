@@ -243,3 +243,8 @@
     background: rgb(75 85 99 / 0.7);
   }
 }
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
