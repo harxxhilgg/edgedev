@@ -121,10 +121,10 @@ async function CommitGraphContent() {
 
               <div className="flex gap-1">
                 <div className="w-2.5 h-2.5 rounded-[2px] bg-zinc-200 dark:bg-zinc-800" />
-                <div className="w-2.5 h-2.5 rounded-[2px] bg-green-200 dark:bg-green-900" />
-                <div className="w-2.5 h-2.5 rounded-[2px] bg-green-400 dark:bg-green-700" />
-                <div className="w-2.5 h-2.5 rounded-[2px] bg-green-500 dark:bg-green-600" />
-                <div className="w-2.5 h-2.5 rounded-[2px] bg-green-600 dark:bg-green-500" />
+                <div className="w-2.5 h-2.5 rounded-[2px] bg-green-300 dark:bg-green-900" />
+                <div className="w-2.5 h-2.5 rounded-[2px] bg-green-500 dark:bg-green-700" />
+                <div className="w-2.5 h-2.5 rounded-[2px] bg-green-600 dark:bg-green-600" />
+                <div className="w-2.5 h-2.5 rounded-[2px] bg-green-700 dark:bg-green-500" />
               </div>
 
               <span>More</span>

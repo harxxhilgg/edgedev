@@ -22,10 +22,10 @@ export function CommitCell({ day }: { day: ContributionDay }) {
 
   const getContributionLevel = (count: number): string => {
     if (count === 0) return "bg-zinc-200 dark:bg-zinc-800";
-    if (count <= 3) return "bg-green-200 dark:bg-green-900";
-    if (count <= 6) return "bg-green-400 dark:bg-green-700";
-    if (count <= 9) return "bg-green-500 dark:bg-green-600";
-    return "bg-green-600 dark:bg-green-500";
+    if (count <= 3) return "bg-green-300 dark:bg-green-900";
+    if (count <= 6) return "bg-green-500 dark:bg-green-700";
+    if (count <= 9) return "bg-green-600 dark:bg-green-600";
+    return "bg-green-700 dark:bg-green-500";
   };
 
   const contributionText =
