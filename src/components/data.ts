@@ -134,6 +134,7 @@ export const techData: TechItem[] = [
     tech: "Linux",
     url: "https://www.linux.org/",
     icon: "/linux-icon.svg",
+    techDescription: "Distro: Pop!_OS, Arch (btw)",
   },
   {
     tech: "Vite",
