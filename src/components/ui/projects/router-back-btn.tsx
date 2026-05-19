@@ -13,6 +13,7 @@ export function RouterBackBtn() {
       size="sm"
       onClick={() => router.back()}
       className="cursor-pointer"
+      sound
     >
       <ArrowUUpLeftIcon />
       Back to Projects

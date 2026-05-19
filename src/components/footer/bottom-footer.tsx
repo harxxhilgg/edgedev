@@ -44,12 +44,12 @@ export default function Footer() {
   }
 
   return (
-    <div className="text-secondary max-w-xl mx-auto py-4 rounded-lg">
-      <div className="grid grid-cols-[300px_1fr] gap-20">
+    <div className="text-secondary max-w-xl mx-auto py-4 rounded-lg px-5 sm:px-0">
+      <div className="grid sm:grid-cols-[300px_1fr] gap-8 sm:gap-20">
         <div>
           <p className="uppercase text-xs font-semibold tracking-wide">Navigate</p>
 
-          <div className="mt-5 text-sm grid grid-cols-[40px_40px_50px_40px] gap-x-8 gap-y-1">
+          <div className="mt-4 sm:mt-5 text-sm grid grid-cols-4 sm:grid-cols-[40px_40px_50px_40px] gap-x-8 gap-y-1">
             <Link href="/" className="hover:text-primary duration-200">Home</Link>
             <Link href="/work-experience" className="hover:text-primary duration-200">Work</Link>
             <Link href="/projects" className="hover:text-primary duration-200">Projects</Link>
@@ -62,7 +62,7 @@ export default function Footer() {
         <div>
           <p className="uppercase text-xs font-semibold tracking-wide">Connect</p>
 
-          <div className="mt-4 grid grid-cols-[45px_45px_45px_45px] gap-y-2">
+          <div className="mt-4 grid grid-cols-8 sm:grid-cols-[45px_45px_45px_45px] gap-y-2">
             <Button variant="outline" size="icon" className="cursor-pointer" onClick={() => window.open(socials.linkedin, "_blank")}>
               <LinkedinLogoIcon weight="duotone" style={{ height: 18, width: 18 }} />
             </Button>
@@ -75,8 +75,10 @@ export default function Footer() {
               <XLogoIcon weight="duotone" style={{ height: 18, width: 18 }} />
             </Button>
 
-            <Button variant="outline" size="icon" className="cursor-pointer" onClick={() => window.open(socials.email, "_blank")}>
-              <EnvelopeSimpleIcon weight="duotone" style={{ height: 18, width: 18 }} />
+            <Button variant="outline" size="icon" className="cursor-pointer">
+              <a href={`mailto:${socials.email}`} aria-label="Mail">
+                <EnvelopeSimpleIcon weight="duotone" style={{ height: 18, width: 18 }} />
+              </a>
             </Button>
 
             <Button variant="outline" size="icon" className="cursor-pointer" onClick={() => window.open(socials.instagram, "_blank")}>
@@ -100,7 +102,7 @@ export default function Footer() {
 
       <Separator orientation="horizontal" className="my-6" />
 
-      <div className="flex justify-between items-center text-sm">
+      <div className="flex flex-col sm:flex-row gap-1 sm:gap-0 justify-between items-center text-sm">
         <p className="tracking-wide text-center sm:text-left">
           © 2026 {" "}
           <b>

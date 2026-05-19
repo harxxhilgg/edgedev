@@ -21,27 +21,21 @@ export function Experience() {
 
             <div>
               <p className="font-bold text-[15px]">{item.company}</p>
-              <p className="font-normal text-sm text-secondary">
-                {item.role}
-              </p>
+              <p className="font-normal text-sm text-secondary">{item.role}</p>
             </div>
           </div>
 
           <div>
             <div className="text-sm text-right text-secondary tracking-wide space-y-[0.1px]">
-              <p>
-                {item.startDate} - {item.endDate}
-              </p>
-              <p>
-                {item.location} ({item.jobType})
-              </p>
+              <p>{item.startDate} - {item.endDate}</p>
+              <p>{item.location} ({item.jobType})</p>
             </div>
           </div>
         </div>
       ))}
 
       <div className="flex mt-8 justify-center">
-        <Button variant="outline" size="default" asChild className="cursor-pointer rounded-xl">
+        <Button variant="outline" size="default" asChild className="cursor-pointer rounded-xl" sound>
           <Link href="/work-experience">
             Show all work experiences
           </Link>

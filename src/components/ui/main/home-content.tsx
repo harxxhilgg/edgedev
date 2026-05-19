@@ -101,6 +101,7 @@ export function HomeContent({ children }: { children?: ReactNode }) {
                   variant="ghost"
                   size="icon"
                   className="cursor-pointer opacity-50 transition-opacity duration-100 group-hover:opacity-100 text-secondary hover:text-primary hover:bg-transparent"
+                  sound
                 >
                   <LinkIcon style={{ height: 16, width: 16 }} />
                 </Button>

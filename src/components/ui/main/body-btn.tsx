@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import { socials, techData } from "@/components/data";
-import { EnvelopeSimpleIcon, GithubLogoIcon, LinkedinLogoIcon, PaperPlaneTiltIcon, ReadCvLogoIcon } from "@phosphor-icons/react";
+import { EnvelopeSimpleIcon, GithubLogoIcon, LinkedinLogoIcon, PaperPlaneTiltIcon, ReadCvLogoIcon, XLogoIcon } from "@phosphor-icons/react";
 
 type Props = {
   tech: string;
@@ -89,16 +89,17 @@ export function TechStackBtn({ tech }: Props) {
 }
 
 export function ResumeShareBtn() {
+
   return (
     <>
-      <Button variant="outline" className="cursor-pointer" asChild>
+      <Button variant="outline" className="cursor-pointer" sound asChild>
         <Link href="/resume">
           <ReadCvLogoIcon style={{ height: 19, width: 19 }} />
           Resume / CV
         </Link>
       </Button>
 
-      <Button variant="ghost" className="cursor-pointer" asChild>
+      <Button variant="ghost" className="cursor-pointer" sound asChild>
         <Link href="/get-in-touch">
           <PaperPlaneTiltIcon style={{ height: 18, width: 18 }} />
           Get in Touch
@@ -150,6 +151,23 @@ export function SocialBtns() {
           <Button
             variant="ghost"
             size="icon"
+            className="text-secondary cursor-pointer hover:bg-transparent -ml-0.5"
+            onClick={() => window.open(socials.twitter, "_blank")}
+          >
+            <XLogoIcon style={{ height: 22, width: 22 }} />
+          </Button>
+        </TooltipTrigger>
+
+        <TooltipContent>
+          <p className="font-semibold">X</p>
+        </TooltipContent>
+      </Tooltip>
+
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Button
+            variant="ghost"
+            size="icon"
             className="text-secondary cursor-pointer hover:bg-transparent"
           >
             <a href={`mailto:${socials.email}`} aria-label="Mail">
@@ -188,6 +206,7 @@ export function ProjectsNoteBtn() {
         variant="link"
         size="sm"
         className="text-sm underline text-muted-foreground cursor-pointer h-0 p-0 hover:text-primary"
+        sound
       >
         contact page
       </Button>

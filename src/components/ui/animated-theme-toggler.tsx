@@ -257,6 +257,7 @@ export const AnimatedThemeToggler = ({
           onClick={toggleTheme}
           ref={buttonRef}
           {...(props)}
+          sound
         >
           <div className={`transition-all duration-300 ${isDark ? "rotate-0 opacity-85" : "rotate-180"}`}>
             <CircleHalfIcon style={{ height: 19, width: 19 }} />

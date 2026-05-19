@@ -19,25 +19,25 @@ export default function TopNav() {
 
       <div className="flex items-center -space-x-1">
         <Link href="/">
-          <Button variant="link" className="cursor-pointer text-secondary hover:text-primary hover:no-underline">
+          <Button variant="link" className="cursor-pointer text-secondary hover:text-primary hover:no-underline" sound>
             Home
           </Button>
         </Link>
 
         <Link href="/work-experience">
-          <Button variant="link" className="cursor-pointer text-secondary hover:text-primary hover:no-underline">
+          <Button variant="link" className="cursor-pointer text-secondary hover:text-primary hover:no-underline" sound>
             Work
           </Button>
         </Link>
 
         <Link href="/projects">
-          <Button variant="link" className="cursor-pointer text-secondary hover:text-primary hover:no-underline">
+          <Button variant="link" className="cursor-pointer text-secondary hover:text-primary hover:no-underline" sound>
             Projects
           </Button>
         </Link>
 
         <Link href="/resume">
-          <Button variant="link" className="cursor-pointer text-secondary hover:text-primary hover:no-underline">
+          <Button variant="link" className="cursor-pointer text-secondary hover:text-primary hover:no-underline" sound>
             Resume
           </Button>
         </Link>
@@ -45,7 +45,7 @@ export default function TopNav() {
 
       <div className="flex items-center pr-8">
         {/* <ThemeToggleClient /> */}
-        <AnimatedThemeToggler />
+        <AnimatedThemeToggler variant="circle" duration={600} />
       </div>
     </div>
   );

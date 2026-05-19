@@ -45,6 +45,7 @@ export function ViewAllProjectsButton() {
         variant="outline"
         size="default"
         className="rounded-xl cursor-pointer"
+        sound
       >
         View All Projects
       </Button>

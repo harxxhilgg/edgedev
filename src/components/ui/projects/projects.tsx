@@ -107,6 +107,7 @@ export function Project() {
                   </div>
                 </div>
 
+                {/* Web Btn */}
                 <div className="flex justify-between items-center mt-4">
                   <p
                     className={
@@ -137,6 +138,7 @@ export function Project() {
                     <Button
                       variant="link"
                       className="hover:no-underline px-0 cursor-pointer text-secondary hover:text-primary"
+                      sound
                     >
                       View Details
                       <ArrowRightIcon size={20} />
@@ -144,6 +146,7 @@ export function Project() {
                   </Link>
                 </div>
 
+                {/* Mobile Btn */}
                 <Link
                   href={`/projects/${item.slug}`}
                   className="sm:hidden"
@@ -152,6 +155,7 @@ export function Project() {
                     variant="outline"
                     size="lg"
                     className="w-full cursor-pointer text-secondary hover:text-primary mt-1"
+                    sound
                   >
                     View Details
                     <ArrowRightIcon />
