@@ -7,9 +7,12 @@ import { ArrowRightIcon, GithubLogoIcon, GlobeSimpleIcon } from "@phosphor-icons
 import { Button } from "../button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../tooltip";
 import { ProjectTechStackBtn } from "../main/body-btn";
+import { useState } from "react";
+import { Skeleton } from "../skeleton";
 
 export function Project() {
   const totalProjects = projectData.length;
+  const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
 
   return (
     <>
@@ -32,10 +35,24 @@ export function Project() {
               key={item.id}
               className="border rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden"
             >
+              {/* Image */}
               <div className="w-full aspect-3/2 relative overflow-hidden h-44 select-none">
+                {!loadedImages[item.id] && (
+                  <Skeleton className="absolute inset-0 rounded-none" />
+                )}
+
                 <Image
                   src={item.image}
                   alt={item.alt}
+                  className={`object-cover transition-opacity duration-300 ${loadedImages[item.id] ? "opacity-100" : "opacity-0"}`}
+                  onLoad={async () => {
+                    // await delay(5000);
+
+                    setLoadedImages((prev) => ({
+                      ...prev,
+                      [item.id]: true,
+                    }))
+                  }}
                   height={500}
                   width={500}
                   priority
@@ -43,6 +60,7 @@ export function Project() {
               </div>
 
               <div className="w-full px-5 pt-5 pb-5 sm:pb-2 space-y-3">
+                {/* Title and Icons */}
                 <div className="flex justify-between items-center">
                   <h3 className="text-lg font-semibold">{item.title}</h3>
 
@@ -95,8 +113,10 @@ export function Project() {
                   </div>
                 </div>
 
+                {/* Description */}
                 <p className="text-sm line-clamp-3 text-secondary tracking-wide">{item.description || null}</p>
 
+                {/* Technologies map */}
                 <div>
                   <h4 className="text-sm font-medium text-secondary mt-4 mb-1">Technologies</h4>
 
@@ -111,20 +131,17 @@ export function Project() {
                 <div className="flex justify-between items-center mt-4">
                   <p
                     className={
+                      ` text-xs rounded-lg py-1 px-2 flex items-center gap-1.5 border-[.5px] tracking-wide
+                        ${isLive && "bg-green-500/10"}
+                        ${isBuilding && "bg-red-500/10"}
+                        ${isDeveloped && "bg-blue-500/10"}
                       `
-                          text-xs rounded-lg py-1 px-2 flex items-center gap-1.5 border-[.5px] tracking-wide
-                          ${isLive && "bg-green-500/10"}
-                          ${isBuilding && "bg-red-500/10"}
-                          ${isDeveloped && "bg-blue-500/10"}
-                        `
                     }
                   >
                     <span
                       className={
-                        `
-                          h-2 w-2 rounded-full blink
-                          ${isLive ? "bg-green-500" : isBuilding ? "bg-red-500" : isDeveloped ? "bg-blue-500" : "bg-gray-500"}
-                        `
+                        `h-2 w-2 rounded-full blink
+                        ${isLive ? "bg-green-500" : isBuilding ? "bg-red-500" : isDeveloped ? "bg-blue-500" : "bg-gray-500"}`
                       }
                     />
 
