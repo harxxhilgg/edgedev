@@ -6,8 +6,15 @@ import { CircleAlert } from "lucide-react";
 import { CommitGraphSkeleton } from "@/components/skeleton";
 import { CommitCell } from "./commit-cell";
 
-// Main graph component
-async function CommitGraphContent() {
+export async function GithubCommitGraph() {
+  return (
+    <Suspense fallback={<CommitGraphSkeleton />}>
+      <CommitGraphContent />
+    </Suspense>
+  );
+}
+
+export async function CommitGraphContent() {
   try {
     const username = process.env.GITHUB_USERNAME;
     const data = await getGitHubContributions(username!);
@@ -145,12 +152,4 @@ async function CommitGraphContent() {
       </section>
     );
   }
-}
-
-export async function GithubCommitGraph() {
-  return (
-    <Suspense fallback={<CommitGraphSkeleton />}>
-      <CommitGraphContent />
-    </Suspense>
-  );
 }
