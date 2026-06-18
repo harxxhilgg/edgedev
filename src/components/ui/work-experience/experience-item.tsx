@@ -19,6 +19,7 @@ export function ExperienceItem() {
 
       {experienceData.map((item) => (
         <div key={item.id} className="mb-8">
+          {/* Title */}
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2.5">
               {/* Uncomment if want to see logo of the company */}
@@ -32,75 +33,77 @@ export function ExperienceItem() {
 
               <div>
                 <div className="flex items-center">
-                  <b className="mr-1">{item.company}</b>
+                  <span className="mr-2 text-lg font-bold">{item.company}</span>
 
-                  <SocialButton
-                    icon={
-                      <GlobeSimpleIcon
-                        style={{ height: 16, width: 16 }}
+                  <div className="flex gap-0.5">
+                    <SocialButton
+                      icon={
+                        <GlobeSimpleIcon
+                          style={{ height: 18, width: 18 }}
+                        />
+                      }
+                      url={item.website}
+                      label="Website"
+                    />
+
+                    <SocialButton
+                      icon={
+                        <LinkedinLogoIcon
+                          style={{ height: 18, width: 18 }}
+                        />
+                      }
+                      url={item.linkedin}
+                      label="LinkedIn"
+                    />
+
+                    {item.twitter && (
+                      <SocialButton
+                        icon={
+                          <XLogoIcon
+                            style={{ height: 18, width: 18 }}
+                          />
+                        }
+                        url={item.twitter}
+                        label="Twitter"
                       />
-                    }
-                    url={item.website}
-                    label="Website"
-                  />
+                    )}
 
-                  <SocialButton
-                    icon={
-                      <LinkedinLogoIcon
-                        style={{ height: 16, width: 16 }}
+                    {item.instagram && (
+                      <SocialButton
+                        icon={
+                          <InstagramLogoIcon
+                            style={{ height: 18, width: 18 }}
+                          />
+                        }
+                        url={item.instagram}
+                        label="Instagram"
                       />
-                    }
-                    url={item.linkedin}
-                    label="LinkedIn"
-                  />
+                    )}
 
-                  {item.twitter && (
-                    <SocialButton
-                      icon={
-                        <XLogoIcon
-                          style={{ height: 16, width: 16 }}
-                        />
-                      }
-                      url={item.twitter}
-                      label="Twitter"
-                    />
-                  )}
+                    {item.facebook && (
+                      <SocialButton
+                        icon={
+                          <FacebookLogoIcon
+                            style={{ height: 18, width: 18 }}
+                          />
+                        }
+                        url={item.facebook}
+                        label="Facebook"
+                      />
+                    )}
 
-                  {item.instagram && (
-                    <SocialButton
-                      icon={
-                        <InstagramLogoIcon
-                          style={{ height: 16, width: 16 }}
-                        />
-                      }
-                      url={item.instagram}
-                      label="Instagram"
-                    />
-                  )}
-
-                  {item.facebook && (
-                    <SocialButton
-                      icon={
-                        <FacebookLogoIcon
-                          style={{ height: 16, width: 16 }}
-                        />
-                      }
-                      url={item.facebook}
-                      label="Facebook"
-                    />
-                  )}
-
-                  {item.youtube && (
-                    <SocialButton
-                      icon={
-                        <YoutubeLogoIcon
-                          style={{ height: 16, width: 16 }}
-                        />
-                      }
-                      url={item.youtube}
-                      label="Youtube"
-                    />
-                  )}
+                    {item.youtube && (
+                      <SocialButton
+                        icon={
+                          <YoutubeLogoIcon
+                            style={{ height: 18, width: 18 }}
+                          />
+                        }
+                        url={item.youtube}
+                        label="Youtube"
+                      />
+                    )}
+                  </div>
                 </div>
 
                 <p className="text-sm text-secondary">{item.role}</p>
@@ -121,6 +124,7 @@ export function ExperienceItem() {
 
           <Separator orientation="horizontal" className="my-3" />
 
+          {/* Technologies & Tools section */}
           <div className="space-y-3">
             <h3 className="font-medium text-[15px] mb-2">
               Technologies & Tools
@@ -133,10 +137,11 @@ export function ExperienceItem() {
             </div>
           </div>
 
+          {/* What I've done section */}
           <div className="mt-4 transition-all">
             <b className="text-[15px]">What I&apos;ve done</b>
 
-            <ul className="list-disc list-outside space-y-1 text-sm text-secondary tracking-wide px-3 sm:px-4 mt-1.5">
+            <ul className="list-disc list-outside space-y-1.5 text-sm text-secondary tracking-wide px-3 sm:px-4 mt-1.5">
               {item.responsibilities.map((resp, index) => (
                 <li key={index}>{resp}</li>
               ))}
