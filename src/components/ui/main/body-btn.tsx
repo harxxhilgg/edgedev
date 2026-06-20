@@ -92,14 +92,14 @@ export function ResumeShareBtn() {
 
   return (
     <>
-      <Button variant="outline" className="cursor-pointer" sound asChild>
+      <Button variant="outline" className="cursor-pointer rounded-xl" sound asChild>
         <Link href="/resume">
           <ReadCvLogoIcon style={{ height: 19, width: 19 }} />
           Resume / CV
         </Link>
       </Button>
 
-      <Button variant="ghost" className="cursor-pointer" sound asChild>
+      <Button variant="ghost" className="cursor-pointer rounded-xl" sound asChild>
         <Link href="/get-in-touch">
           <PaperPlaneTiltIcon style={{ height: 18, width: 18 }} />
           Get in Touch
