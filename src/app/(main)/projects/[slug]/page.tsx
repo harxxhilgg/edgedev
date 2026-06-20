@@ -40,6 +40,7 @@ export default async function Page({ params }: PageProps) {
           height={700}
           width={700}
           priority
+          loading="eager"
         />
       </div>
 
