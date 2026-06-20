@@ -27,12 +27,11 @@ export function HomeContent({ children }: { children?: ReactNode }) {
       className="w-full py-1 px-4 sm:py-3.5 sm:px-0 transition-all"
     >
       <section aria-labelledby="intro-heading">
-        <h1
-          id="intro-heading"
-          className="mt-2 mb-7 flex flex-wrap items-center space-x-2 text-[23px] sm:text-2xl font-bold tracking-wide"
-        >
+        <h1 id="intro-heading" className="mt-2 mb-7 flex flex-wrap items-center space-x-2 text-[23px] sm:text-2xl font-bold tracking-wide">
           <span>Hi, I&apos;m Harshil</span>{" "}
+
           <span className="hidden sm:block">—</span>
+
           <span className="inline-flex min-w-80">
             <RotatingTextContainer
               text={[
@@ -65,10 +64,13 @@ export function HomeContent({ children }: { children?: ReactNode }) {
           <span> {<BodyBtn tech="Node.js" />} ,</span>
           <span> {<BodyBtn tech="PostgreSQL" />} . </span>
           With a focus on
+
           <b className="text-black dark:text-white"> UI </b>
           Design. Enthusiastic about
+
           <b className="text-black dark:text-white"> Fullstack Development </b>
           with
+
           <b className="text-black dark:text-white"> Next.js</b>,
           driven by a keen eye for design.
         </p>
@@ -82,15 +84,9 @@ export function HomeContent({ children }: { children?: ReactNode }) {
         </div>
       </section>
 
-      <section
-        aria-labelledby="tech-stack-heading"
-        className="mt-5 sm:mt-6"
-      >
+      <section aria-labelledby="tech-stack-heading" className="mt-5 sm:mt-6">
         <div className="group flex flex-row items-center mb-4">
-          <h2
-            id="tech-stack-heading"
-            className="text-[22px] font-bold"
-          >
+          <h2 id="tech-stack-heading" className="text-[22px] font-bold">
             Stack
           </h2>
 
@@ -117,29 +113,17 @@ export function HomeContent({ children }: { children?: ReactNode }) {
         <TechStack />
       </section>
 
-      <section
-        aria-labelledby="experience-heading"
-        className="mt-5 sm:mt-6"
-      >
-        <h2
-          id="experience-heading"
-          className="text-[22px] font-bold mb-4"
-        >
+      <section aria-labelledby="experience-heading" className="mt-5 sm:mt-6">
+        <h2 id="experience-heading" className="text-[22px] font-bold mb-4">
           Experience
         </h2>
         <Experience />
       </section>
 
-      <section
-        aria-labelledby="about-me-heading"
-        className="mt-5 sm:mt-6"
-      >
+      <section aria-labelledby="about-me-heading" className="mt-5 sm:mt-6">
         <p className="text-secondary">About</p>
 
-        <h2
-          id="about-me-heading"
-          className="text-[22px] font-bold"
-        >
+        <h2 id="about-me-heading" className="text-[22px] font-bold">
           Me
         </h2>
         <AboutMe />
