@@ -15,7 +15,7 @@ export default function PdfViewerClient() {
 
   useEffect(() => {
     const showSkeletonForDuration = async () => {
-      await delay(500);
+      await delay(1500);
       setShowSkeleton(false);
       setShowPdf(true);
     };
@@ -28,7 +28,9 @@ export default function PdfViewerClient() {
       <div className="w-full flex justify-center">
         <div className="rounded-3xl p-1 border border-transparent bg-zinc-950/5 dark:bg-white/5 dark:border-white/20">
           <div className="rounded-2xl overflow-hidden shadow-xs dark:shadow-none">
-            <Skeleton className="w-157 h-203" />
+            <Skeleton
+              className="w-[calc(100vw-40px)] max-w-165 aspect-595/842"
+            />
           </div>
         </div>
       </div>
