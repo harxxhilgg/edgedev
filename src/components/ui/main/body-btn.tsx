@@ -94,14 +94,14 @@ export function ResumeShareBtn() {
     <>
       <Button variant="outline" className="cursor-pointer rounded-xl" sound asChild>
         <Link href="/resume">
-          <ReadCvLogoIcon style={{ height: 19, width: 19 }} />
+          <ReadCvLogoIcon style={{ height: 19, width: 19 }} weight="duotone" />
           Resume / CV
         </Link>
       </Button>
 
       <Button variant="ghost" className="cursor-pointer rounded-xl" sound asChild>
         <Link href="/get-in-touch">
-          <PaperPlaneTiltIcon style={{ height: 18, width: 18 }} />
+          <PaperPlaneTiltIcon style={{ height: 18, width: 18 }} weight="duotone" />
           Get in Touch
         </Link>
       </Button>

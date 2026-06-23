@@ -259,10 +259,10 @@ export const AnimatedThemeToggler = ({
           {...(props)}
           sound
         >
-          <div className={`transition-all duration-300 ${isDark ? "rotate-0 opacity-85" : "rotate-180"}`}>
-            <CircleHalfIcon style={{ height: 19, width: 19 }} />
+          <div className={`transition-all duration-600 ${isDark ? "rotate-0 opacity-85" : "rotate-180"}`}>
+            <CircleHalfIcon style={{ height: 20, width: 20 }} weight="duotone" />
           </div>
-          <span className="sr-only">Toggle theme</span>
+          <span className="sr-only">Switch Theme</span>
         </Button>
       </TooltipTrigger>
       <TooltipContent>
