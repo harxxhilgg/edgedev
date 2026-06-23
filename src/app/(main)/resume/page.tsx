@@ -19,9 +19,7 @@ export default function Page() {
 
       <Separator orientation="horizontal" className="my-10" />
 
-      <div>
-        <PdfViewerClient />
-      </div>
+      <PdfViewerClient />
     </motion.div>
   );
 }
