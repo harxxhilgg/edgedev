@@ -44,8 +44,8 @@ export default function TopNav() {
       </div>
 
       <div className="flex items-center pr-8">
-        {/* <ThemeToggleClient /> */}
-        <AnimatedThemeToggler variant="circle" duration={600} />
+        {/* <ThemeToggleClient />  */}
+        <AnimatedThemeToggler variant="circle" duration={800} />
       </div>
     </div>
   );

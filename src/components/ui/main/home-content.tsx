@@ -32,6 +32,7 @@ export function HomeContent({ children }: { children?: ReactNode }) {
 
           <span className="hidden sm:block">—</span>
 
+          {/* Rotating Text */}
           <span className="inline-flex min-w-80">
             <RotatingTextContainer
               text={[
@@ -75,15 +76,18 @@ export function HomeContent({ children }: { children?: ReactNode }) {
           driven by a keen eye for design.
         </p>
 
+        {/* Resume GetInTouch Btn */}
         <div className="mt-5 sm:mt-6 space-x-2">
           <ResumeShareBtn />
         </div>
 
+        {/* Social Btns */}
         <div className="inline-flex mt-5 sm:mt-6">
           <SocialBtns />
         </div>
       </section>
 
+      {/* Stack */}
       <section aria-labelledby="tech-stack-heading" className="mt-5 sm:mt-6">
         <div className="group flex flex-row items-center mb-4">
           <h2 id="tech-stack-heading" className="text-[22px] font-bold">
@@ -113,13 +117,16 @@ export function HomeContent({ children }: { children?: ReactNode }) {
         <TechStack />
       </section>
 
+      {/* Experience */}
       <section aria-labelledby="experience-heading" className="mt-5 sm:mt-6">
         <h2 id="experience-heading" className="text-[22px] font-bold mb-4">
           Experience
         </h2>
+
         <Experience />
       </section>
 
+      {/* About Me */}
       <section aria-labelledby="about-me-heading" className="mt-5 sm:mt-6">
         <p className="text-secondary">About</p>
 

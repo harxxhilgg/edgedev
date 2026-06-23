@@ -13,6 +13,7 @@ import { socials } from "../data";
 export default function Footer() {
   const [visitorCount, setVisitorCount] = useState<number | null>(null);
 
+  // Visitor Count
   useEffect(() => {
     async function init() {
       const visitorId = getVisitorId();
@@ -26,6 +27,7 @@ export default function Footer() {
     init();
   }, []);
 
+  // Suffix for Count
   function getOrdinalSuffix(n: number) {
     const lastTwo = n % 100;
 
@@ -46,6 +48,7 @@ export default function Footer() {
   return (
     <div className="text-secondary max-w-xl mx-auto py-4 rounded-lg px-5 sm:px-0">
       <div className="grid sm:grid-cols-[300px_1fr] gap-8 sm:gap-20">
+        {/* Navigate */}
         <div>
           <p className="uppercase text-xs font-semibold tracking-wide">Navigate</p>
 
@@ -59,6 +62,7 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Connect */}
         <div>
           <p className="uppercase text-xs font-semibold tracking-wide">Connect</p>
 
