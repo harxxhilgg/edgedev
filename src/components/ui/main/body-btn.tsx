@@ -189,7 +189,7 @@ export function FooterBtn({ name }: { name: string }) {
     <Button
       variant="link"
       size="sm"
-      className="font-semibold text-sm leading-8 tracking-wide text-secondary px-0 cursor-pointer hover:text-primary"
+      className="text-sm leading-8 tracking-wide text-secondary px-0 cursor-pointer hover:text-primary"
       onClick={() => window.open("https://github.com/harxxhilgg", "_blank")}
     >
       {name}

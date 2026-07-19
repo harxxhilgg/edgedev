@@ -112,7 +112,7 @@ export default function Footer() {
           <b>
             <FooterBtn name="Harshil Patel" />
           </b>
-          . All rights reserved.
+          . MIT Licensed.
         </p>
 
         {visitorCount !== null && (
