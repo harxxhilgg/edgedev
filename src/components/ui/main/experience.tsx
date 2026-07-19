@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Button } from "../button";
 import Link from "next/link";
 import { homeExperienceData } from "@/components/data";
@@ -9,7 +8,7 @@ export function Experience() {
       {homeExperienceData.map((item) => (
         <div key={item.id} className="flex justify-between items-center mb-4">
           <div className="flex items-center gap-3">
-            <div>
+            {/* <div>
               <Image
                 src={item.icon}
                 alt={item.alt}
@@ -17,10 +16,10 @@ export function Experience() {
                 width={40}
                 className="border border-black/10 rounded-sm"
               />
-            </div>
+            </div> */}
 
             <div>
-              <p className="font-bold text-[15px]">{item.company}</p>
+              <p className="font-bold text-[17px]">{item.company}</p>
               <p className="font-normal text-sm text-secondary">{item.role}</p>
             </div>
           </div>
