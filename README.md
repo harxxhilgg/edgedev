@@ -32,6 +32,8 @@ cd edgedev
 bun install
 ```
 
+**Important**: Before starting the development server, create a ```.env.local``` file in the project root using the provided ```.env.example``` file, and fill in all required environment variables before running or building the project. This helps prevent build-time errors.
+
 ### Start the development server
 
 ```bash
