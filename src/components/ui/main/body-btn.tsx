@@ -89,7 +89,6 @@ export function TechStackBtn({ tech }: Props) {
 }
 
 export function ResumeShareBtn() {
-
   return (
     <>
       <Button variant="outline" className="cursor-pointer rounded-xl" sound asChild>
@@ -199,9 +198,7 @@ export function FooterBtn({ name }: { name: string }) {
 
 export function ProjectsNoteBtn() {
   return (
-    <Link
-      href="/get-in-touch"
-    >
+    <Link href="/get-in-touch">
       <Button
         variant="link"
         size="sm"

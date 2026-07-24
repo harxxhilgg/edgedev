@@ -4,16 +4,16 @@ Live: https://harshilp-portfolio.vercel.app
 
 ## Tech Stack
 
-| Category | Technology |
-|----------|------------|
-| Framework | Next.js |
-| Language | TypeScript |
-| Styling | Tailwind CSS v4 |
-| Database | Supabase |
-| ORM | Prisma |
-| Cache | Redis |
-| Animations | GSAP |
-| Deployment | Vercel |
+| Category   | Technology      |
+| ---------- | --------------- |
+| Framework  | Next.js         |
+| Language   | TypeScript      |
+| Styling    | Tailwind CSS v4 |
+| Database   | Supabase        |
+| ORM        | Prisma          |
+| Cache      | Redis           |
+| Animations | GSAP            |
+| Deployment | Vercel          |
 
 ---
 
@@ -32,7 +32,7 @@ cd edgedev
 bun install
 ```
 
-**Important**: Before starting the development server, create a ```.env.local``` file in the project root using the provided ```.env.example``` file, and fill in all required environment variables before running or building the project. This helps prevent build-time errors.
+**Important**: Before starting the development server, create a `.env.local` file in the project root using the provided `.env.example` file, and fill in all required environment variables before running or building the project. This helps prevent build-time errors.
 
 ### Start the development server
 
@@ -50,14 +50,14 @@ http://localhost:3000
 
 ## Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `bun run dev` | Start the development server |
-| `bun run build` | Build the application for production |
-| `bun run start` | Run the production build |
-| `bun run lint` | Run ESLint |
-| `bun run lint:fix` | Automatically fix linting issues |
-| `bun run format` | Format the codebase using Prettier |
+| Command            | Description                          |
+| ------------------ | ------------------------------------ |
+| `bun run dev`      | Start the development server         |
+| `bun run build`    | Build the application for production |
+| `bun run start`    | Run the production build             |
+| `bun run lint`     | Run ESLint                           |
+| `bun run lint:fix` | Automatically fix linting issues     |
+| `bun run format`   | Format the codebase using Prettier   |
 
 ---
 
