@@ -10,7 +10,7 @@ export default function Page() {
       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       className="w-full py-6 px-4 sm:px-0 transition-all"
     >
-      <section aria-labelledby="resume-heading" className="mb-20">
+      <section aria-labelledby="resume-heading" className="mb-10 sm:mb-16">
         <h1 id="resume-heading" className="mt-4 sm:mt-10 text-center text-2xl gap-x-2 sm:text-3xl font-semibold tracking-tight">
           Resume
         </h1>

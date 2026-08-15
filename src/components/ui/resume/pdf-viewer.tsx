@@ -19,7 +19,7 @@ export default function PdfViewer() {
   useEffect(() => {
     const updateWidth = () => {
       const containerWidth = wrapperRef.current?.clientWidth ?? 0;
-      const w = Math.min(containerWidth - 40, 660);
+      const w = Math.min(containerWidth - 40, 800);
 
       setPageWidth(w);
     };
