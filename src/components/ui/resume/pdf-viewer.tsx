@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
+import 'react-pdf/dist/Page/AnnotationLayer.css';
 
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
@@ -33,7 +34,7 @@ export default function PdfViewer() {
       <div className="rounded-3xl p-1 border border-transparent bg-zinc-950/5 dark:bg-white/5 dark:border-white/20">
         <div className="rounded-2xl overflow-hidden shadow-xs dark:shadow-none">
           <Document
-            file="/resume-harshil.pdf"
+            file="/harshil-resume-v2d.pdf"
             loading={
               <p className="p-4 text-sm text-black/60 dark:text-white/60"></p>
             }
@@ -45,7 +46,7 @@ export default function PdfViewer() {
               pageNumber={1}
               width={pageWidth}
               renderTextLayer={false}
-              renderAnnotationLayer={false}
+              renderAnnotationLayer={true}
             />
           </Document>
         </div>

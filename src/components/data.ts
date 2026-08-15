@@ -391,260 +391,115 @@ export type ProjectItem = {
 
 export const projectData: ProjectItem[] = [
   {
-    id: "571a43274d71fb5eb11c6e05aae9babb",
-    slug: "pickndeliver",
-    image: "/projects/pickndeliver-final.png",
-    alt: "PicknDeliver Image",
+    id: "7c3a91f0e8426bd1548fa9c2371d60be",
+    slug: "protected-notepad",
+    image: "/projects/protected-notepad-final.png",
+    alt: "Protected Notepad Landing Page Image",
     status: "Live",
-    title: "PicknDeliver",
+    title: "Protected Notepad",
     description:
-      "Delivery portal mobile application enhanced with real-time communication using sockets and integrated map-based functionality for location tracking.",
-    website:
-      "https://play.google.com/store/apps/details?id=app.itfuturz.pickndeliver&pcampaignid=web_share",
+      "An encrypted, privacy-focused online notepad built with Next.js, allowing users to create and access password-protected notes through shareable slugs.",
+    website: "https://protected-notepad.vercel.app",
+    github: "https://github.com/harxxhilgg/reusables-ex",
     technologies: [
-      "Expo",
-      "React Native",
+      "Next.js",
       "TypeScript",
-      "Nativewind",
-      "MongoDB",
-      "Firebase",
-      "Google Play Console",
-      "Zod",
-      "Git",
-      "GitHub",
-    ],
-    details: {
-      description:
-        "A mobile application for a delivery portal where users can add & track locations using map-based functionality, receive real-time communication.",
-      timeline: "2 Months",
-      role: "Frontend",
-      team: "2",
-      tag: "Your Smart Pickup & Delivery Partner",
-      overview:
-        "Experience a faster, simpler, and more reliable way to send or receive items. With PicknDeliver, you can easily choose your pickup and drop-off locations, select a vehicle that fits your needs, and place your order in just a few taps.",
-      feature: [
-        {
-          title: "Live Location Tracking:",
-          description:
-            "Track your deliveries in real-time with integrated map functionality.",
-        },
-        {
-          title: "Delivery Management:",
-          description:
-            "Efficiently manage and monitor all your delivery operations.",
-        },
-        {
-          title: "Smart Notifications:",
-          description: "Get instant updates on delivery status and milestones.",
-        },
-        {
-          title: "Optimized Routes:",
-          description: "Navigate efficiently with built-in map integration.",
-        },
-        {
-          title: "Fast & Reliable:",
-          description:
-            "Built with Expo framework which is fast, reliable and future proof which provides smooth performance with less bugs.",
-        },
-      ],
-    },
-  },
-  {
-    id: "5ec402a44db0732b3595c9bf5cefab69",
-    slug: "univent",
-    image: "/projects/univent-final.png",
-    alt: "Univent Image",
-    status: "Live",
-    title: "Univent",
-    description:
-      "Engineered a real-time event discovery and registration platform that reduced search time by 20% and streamlined the user's registration flow.",
-    website:
-      "https://expo.dev/accounts/harshil0/projects/univent/builds/79d3ccc8-3a45-46cf-9460-b3208b19aa5b",
-    github: "https://github.com/harxxhilgg/univent",
-    technologies: [
-      "Expo",
-      "React Native",
-      "TypeScript",
-      "Node.js",
-      "Express.js",
-      "PostgreSQL (Supabase)",
-      "Vercel",
-      "React Testing Library",
-      "React Hook Form",
-      "ImgBB",
-      "NodeMailer",
-    ],
-    details: {
-      description:
-        "An event discovery and registration platform with a responsive user interface with haptics, delivering a seamless and intuitive navigation experience on mobile devices. It includes a user authentication system with push notifications for event reminders.",
-      timeline: "4 Months",
-      role: "Full Stack",
-      team: "Solo",
-      tag: "Create & Manage Events",
-      overview:
-        "A platform for real-time event discovery and registration. Users can find events and have a streamlined registration flow.",
-      feature: [
-        {
-          title: "Real-time Event Discovery & Registration:",
-          description:
-            "Engineered a real-time event discovery and registration platform that reduced search time by 20% and streamlined the user's registration flow.",
-        },
-        {
-          title: "User Authentication & Push Notifications:",
-          description:
-            "Implemented a user authentication system with push notifications for event reminders, which led to a slight increase in user engagement.",
-        },
-        {
-          title: "Responsive User Interface:",
-          description:
-            "Developed a responsive user interface with haptics, delivering a seamless and intuitive navigation experience on mobile devices.",
-        },
-      ],
-      whyIBuiltTitle:
-        "My motivation to build Univent was driven by the desire to streamline the event discovery and registration process for users, leveraging modern mobile development practices and real-time communication.",
-      whyIBuilt: [
-        {
-          description:
-            "To gain hands-on experience with the full mobile development lifecycle, from frontend UI/UX to backend infrastructure and database management.",
-        },
-        {
-          description:
-            "To implement and optimize a real-time system using technologies like Expo and PostgreSQL for immediate data updates.",
-        },
-        {
-          description:
-            "To solve the common problem of fragmented event platforms by creating a unified, efficient, and user-friendly solution.",
-        },
-        {
-          description:
-            "To deepen my knowledge in full-stack development, utilizing TypeScript for type safety across the entire application.",
-        },
-        {
-          description:
-            "To practice developing high-quality, responsive mobile applications that incorporate modern features like haptics and push notifications.",
-        },
-        {
-          description:
-            "To integrate robust authentication and state management systems (using tools like Jest for testing) to ensure application reliability and security.",
-        },
-      ],
-      futurePlans: [
-        {
-          description:
-            "Integrate a payment gateway (e.g., Stripe) to support paid event registrations and ticket sales directly within the app.",
-        },
-        {
-          description:
-            "Implement an event recommendation engine based on user activity, location, and past registrations to enhance discovery.",
-        },
-        {
-          description:
-            "Develop a dedicated organizer dashboard with tools for event analytics, attendee management, and communication features.",
-        },
-        {
-          description:
-            "Expand the platform with social features, allowing users to share events and invite friends directly.",
-        },
-      ],
-    },
-  },
-  {
-    id: "6f9444080d0e5c23e485a98e9a3ca3b4",
-    slug: "axokaze",
-    image: "/projects/axokaze-final.png",
-    alt: "AxoKaze Image",
-    status: "Building",
-    title: "AxoKaze",
-    description:
-      "Built a web application integrating Pokédex data, F1 race tracking, real-time weather forecasts and user profile management in a unified interface.",
-    website: "https://axokaze.vercel.app",
-    github: "https://github.com/harxxhilgg/axokaze-a",
-    technologies: [
-      "Vite",
       "React",
-      "TypeScript",
       "Tailwind CSS",
-      "Zustand",
-      "React Router",
-      "Axios",
-      "React Hook Form",
-      "Zod",
-      "Recharts",
-      "Vitest",
+      "shadcn/ui",
+      "Prisma",
+      "PostgreSQL",
       "Supabase",
-      "Vercel",
+      "CodeMirror",
+      "@noble/ciphers",
+      "CryptoJS",
     ],
     details: {
       description:
-        "A web application featuring secure authentication with email/password (OTP verification) and Google OAuth 2.0 integration, featuring JWT-based auto-refresh tokens. It integrates multiple external APIs with optimized data fetching and caching strategies using Zustand for state management.",
-      timeline: "3 Months",
+        "Protected Notepad is a privacy-focused web application that provides a simple interface for creating and securely accessing encrypted notes. Each document is identified by a unique slug and protected with a password, while the application combines client-side encryption, PostgreSQL persistence through Prisma and Supabase, and a responsive CodeMirror-based editor.",
+      timeline: "1 Month",
       role: "Full Stack",
       team: "Solo",
-      tag: "Unified Dashboard",
-      note: "Social login and Session storage may not work since I am transferring manual authentication to Supabase authentication. For the meantime, you can sign in using your email & password.",
+      tag: "a privacy-focused encrypted notepad",
+      note: "The application is designed around privacy and simplicity: users can create a document through a custom slug, edit its contents in a full-featured code editor, and protect the saved content with a password. Encryption is handled before the content is persisted, while authentication to the document itself is separate from the application's database access.",
       overview:
-        "A unified dashboard application integrating diverse data sources like Pokédex data, F1 race tracking, and real-time weather forecasts.",
+        "A secure and minimal notepad application focused on encrypted document storage and a frictionless user experience. It combines Next.js Server Actions, Prisma, Supabase PostgreSQL and client-side cryptography with a responsive CodeMirror editor and custom document access flow.",
       feature: [
         {
-          title: "Unified Data Integration:",
+          title: "Password-Protected Documents:",
           description:
-            "Built a web application integrating Pokédex data, F1 race tracking, real-time weather forecasts and user profile management in a unified interface.",
+            "Documents are accessed through unique slugs and protected with a password-based unlock and save flow, preventing unauthorized access to stored content.",
         },
         {
-          title: "Secure Authentication:",
+          title: "Client-Side Encryption:",
           description:
-            "Implemented secure authentication with email/password (OTP verification) and Google OAuth 2.0 integration, featuring JWT-based auto-refresh tokens.",
+            "Note contents are encrypted before being persisted using modern cryptographic primitives from @noble/ciphers, keeping plaintext content out of the database.",
         },
         {
-          title: "Optimized API Integration:",
+          title: "CodeMirror Editor:",
           description:
-            "Integrated multiple external APIs (PokéAPI, Ergast F1 API and WeatherAPI) with optimized data fetching and caching strategies using Zustand for state management.",
+            "Integrated CodeMirror with Markdown support and a responsive editor experience, providing a powerful editing environment while adapting to different screen sizes.",
+        },
+        {
+          title: "Persistent PostgreSQL Storage:",
+          description:
+            "Uses Prisma with Supabase-hosted PostgreSQL to persist documents reliably, with Server Actions handling document creation, retrieval, updates and deletion.",
+        },
+        {
+          title: "Responsive & Minimal UI:",
+          description:
+            "Built with Tailwind CSS and shadcn/ui components to create a clean interface with responsive layouts, dialogs, notifications and interactive states.",
+        },
+        {
+          title: "Unsaved Changes Protection:",
+          description:
+            "Tracks saved and current document content to warn users before accidentally leaving or reloading a page with unsaved changes.",
         },
       ],
       whyIBuiltTitle:
-        "I created AxoKaze to demonstrate my ability to build a complex, data-intensive web application that seamlessly integrates multiple disparate data sources into a cohesive, performant, and secure user experience.",
+        "I created Protected Notepad to explore how a simple notepad experience could be combined with real-world security, persistence and production-oriented application architecture.",
       whyIBuilt: [
         {
           description:
-            "To master modern web development with React, TypeScript, and Vite, focusing on performance and scalability.",
+            "To build a practical application around client-side encryption rather than treating security as an afterthought.",
         },
         {
           description:
-            "To implement a robust and secure authentication flow, including social login and JWT token management.",
+            "To gain hands-on experience with Next.js Server Actions, Prisma and Supabase PostgreSQL in a production-style application.",
         },
         {
           description:
-            "To gain experience in state management with Zustand, particularly for handling cached data from multiple API calls.",
+            "To implement a clean document-access flow using unique slugs, password protection and dedicated create and unlock dialogs.",
         },
         {
           description:
-            "To practice advanced UI/UX design using Tailwind CSS, ensuring a responsive and visually appealing dashboard.",
+            "To integrate CodeMirror into a responsive Next.js application and build a polished editing experience around it.",
         },
         {
           description:
-            "To learn how to efficiently integrate and harmonize data from diverse external APIs (PokéAPI, F1 API, WeatherAPI).",
-        },
-        {
-          description:
-            "To develop strong testing practices using Vitest to ensure the reliability of all integrated features and components.",
+            "To practice production-focused concerns such as database health feedback, error handling, unsaved-change protection and keyboard shortcuts.",
         },
       ],
       futurePlans: [
         {
           description:
-            "Allow users to customize their dashboard layout and select which data modules (Pokédex, F1, Weather) they want to display.",
+            "Improve the document security model with stronger password-derived key management and additional cryptographic safeguards.",
         },
         {
           description:
-            "Implement a notification system for F1 race updates and personalized weather alerts.",
+            "Add richer document management features such as document expiration, sharing controls and configurable access policies.",
         },
         {
           description:
-            "Expand the Pokédex section with advanced search filters and detailed battle statistics.",
+            "Expand the editor with additional Markdown functionality, formatting tools and improved document previews.",
         },
         {
           description:
-            "Introduce a paid subscription tier offering premium features like historical data for F1 and extended weather forecasts.",
+            "Add automated testing for encryption, document actions and critical editor workflows using Jest and React Testing Library.",
+        },
+        {
+          description:
+            "Continue improving observability and administrative logging for database access, document actions and application health.",
         },
       ],
     },
@@ -852,6 +707,265 @@ export const projectData: ProjectItem[] = [
         "/projects/minimal/minimal-two.jpeg",
         "/projects/minimal/minimal-three.jpeg",
         "/projects/minimal/minimal-four.jpeg",
+      ],
+    },
+  },
+  {
+    id: "6f9444080d0e5c23e485a98e9a3ca3b4",
+    slug: "axokaze",
+    image: "/projects/axokaze-final.png",
+    alt: "AxoKaze Image",
+    status: "Developed",
+    title: "AxoKaze",
+    description:
+      "Built a web application integrating Pokédex data, F1 race tracking, real-time weather forecasts and user profile management in a unified interface.",
+    website: "https://axokaze.vercel.app",
+    github: "https://github.com/harxxhilgg/axokaze-a",
+    technologies: [
+      "Vite",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zustand",
+      "React Router",
+      "Axios",
+      "React Hook Form",
+      "Zod",
+      "Recharts",
+      "Vitest",
+      "Supabase",
+      "Vercel",
+    ],
+    details: {
+      description:
+        "A web application featuring secure authentication with email/password (OTP verification) and Google OAuth 2.0 integration, featuring JWT-based auto-refresh tokens. It integrates multiple external APIs with optimized data fetching and caching strategies using Zustand for state management.",
+      timeline: "3 Months",
+      role: "Full Stack",
+      team: "Solo",
+      tag: "Unified Dashboard",
+      note: "Social login and Session storage may not work since I am transferring manual authentication to Supabase authentication. For the meantime, you can sign in using your email & password.",
+      overview:
+        "A unified dashboard application integrating diverse data sources like Pokédex data, F1 race tracking, and real-time weather forecasts.",
+      feature: [
+        {
+          title: "Unified Data Integration:",
+          description:
+            "Built a web application integrating Pokédex data, F1 race tracking, real-time weather forecasts and user profile management in a unified interface.",
+        },
+        {
+          title: "Secure Authentication:",
+          description:
+            "Implemented secure authentication with email/password (OTP verification) and Google OAuth 2.0 integration, featuring JWT-based auto-refresh tokens.",
+        },
+        {
+          title: "Optimized API Integration:",
+          description:
+            "Integrated multiple external APIs (PokéAPI, Ergast F1 API and WeatherAPI) with optimized data fetching and caching strategies using Zustand for state management.",
+        },
+      ],
+      whyIBuiltTitle:
+        "I created AxoKaze to demonstrate my ability to build a complex, data-intensive web application that seamlessly integrates multiple disparate data sources into a cohesive, performant, and secure user experience.",
+      whyIBuilt: [
+        {
+          description:
+            "To master modern web development with React, TypeScript, and Vite, focusing on performance and scalability.",
+        },
+        {
+          description:
+            "To implement a robust and secure authentication flow, including social login and JWT token management.",
+        },
+        {
+          description:
+            "To gain experience in state management with Zustand, particularly for handling cached data from multiple API calls.",
+        },
+        {
+          description:
+            "To practice advanced UI/UX design using Tailwind CSS, ensuring a responsive and visually appealing dashboard.",
+        },
+        {
+          description:
+            "To learn how to efficiently integrate and harmonize data from diverse external APIs (PokéAPI, F1 API, WeatherAPI).",
+        },
+        {
+          description:
+            "To develop strong testing practices using Vitest to ensure the reliability of all integrated features and components.",
+        },
+      ],
+      futurePlans: [
+        {
+          description:
+            "Allow users to customize their dashboard layout and select which data modules (Pokédex, F1, Weather) they want to display.",
+        },
+        {
+          description:
+            "Implement a notification system for F1 race updates and personalized weather alerts.",
+        },
+        {
+          description:
+            "Expand the Pokédex section with advanced search filters and detailed battle statistics.",
+        },
+        {
+          description:
+            "Introduce a paid subscription tier offering premium features like historical data for F1 and extended weather forecasts.",
+        },
+      ],
+    },
+  },
+  {
+    id: "571a43274d71fb5eb11c6e05aae9babb",
+    slug: "pickndeliver",
+    image: "/projects/pickndeliver-final.png",
+    alt: "PicknDeliver Image",
+    status: "Live",
+    title: "PicknDeliver",
+    description:
+      "Delivery portal mobile application enhanced with real-time communication using sockets and integrated map-based functionality for location tracking.",
+    website:
+      "https://play.google.com/store/apps/details?id=app.itfuturz.pickndeliver&pcampaignid=web_share",
+    technologies: [
+      "Expo",
+      "React Native",
+      "TypeScript",
+      "Nativewind",
+      "MongoDB",
+      "Firebase",
+      "Google Play Console",
+      "Zod",
+      "Git",
+      "GitHub",
+    ],
+    details: {
+      description:
+        "A mobile application for a delivery portal where users can add & track locations using map-based functionality, receive real-time communication.",
+      timeline: "2 Months",
+      role: "Frontend",
+      team: "2",
+      tag: "Your Smart Pickup & Delivery Partner",
+      overview:
+        "Experience a faster, simpler, and more reliable way to send or receive items. With PicknDeliver, you can easily choose your pickup and drop-off locations, select a vehicle that fits your needs, and place your order in just a few taps.",
+      feature: [
+        {
+          title: "Live Location Tracking:",
+          description:
+            "Track your deliveries in real-time with integrated map functionality.",
+        },
+        {
+          title: "Delivery Management:",
+          description:
+            "Efficiently manage and monitor all your delivery operations.",
+        },
+        {
+          title: "Smart Notifications:",
+          description: "Get instant updates on delivery status and milestones.",
+        },
+        {
+          title: "Optimized Routes:",
+          description: "Navigate efficiently with built-in map integration.",
+        },
+        {
+          title: "Fast & Reliable:",
+          description:
+            "Built with Expo framework which is fast, reliable and future proof which provides smooth performance with less bugs.",
+        },
+      ],
+    },
+  },
+  {
+    id: "5ec402a44db0732b3595c9bf5cefab69",
+    slug: "univent",
+    image: "/projects/univent-final.png",
+    alt: "Univent Image",
+    status: "Live",
+    title: "Univent",
+    description:
+      "Engineered a real-time event discovery and registration platform that reduced search time by 20% and streamlined the user's registration flow.",
+    website:
+      "https://expo.dev/accounts/harshil0/projects/univent/builds/79d3ccc8-3a45-46cf-9460-b3208b19aa5b",
+    github: "https://github.com/harxxhilgg/univent",
+    technologies: [
+      "Expo",
+      "React Native",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL (Supabase)",
+      "Vercel",
+      "React Testing Library",
+      "React Hook Form",
+      "ImgBB",
+      "NodeMailer",
+    ],
+    details: {
+      description:
+        "An event discovery and registration platform with a responsive user interface with haptics, delivering a seamless and intuitive navigation experience on mobile devices. It includes a user authentication system with push notifications for event reminders.",
+      timeline: "4 Months",
+      role: "Full Stack",
+      team: "Solo",
+      tag: "Create & Manage Events",
+      overview:
+        "A platform for real-time event discovery and registration. Users can find events and have a streamlined registration flow.",
+      feature: [
+        {
+          title: "Real-time Event Discovery & Registration:",
+          description:
+            "Engineered a real-time event discovery and registration platform that reduced search time by 20% and streamlined the user's registration flow.",
+        },
+        {
+          title: "User Authentication & Push Notifications:",
+          description:
+            "Implemented a user authentication system with push notifications for event reminders, which led to a slight increase in user engagement.",
+        },
+        {
+          title: "Responsive User Interface:",
+          description:
+            "Developed a responsive user interface with haptics, delivering a seamless and intuitive navigation experience on mobile devices.",
+        },
+      ],
+      whyIBuiltTitle:
+        "My motivation to build Univent was driven by the desire to streamline the event discovery and registration process for users, leveraging modern mobile development practices and real-time communication.",
+      whyIBuilt: [
+        {
+          description:
+            "To gain hands-on experience with the full mobile development lifecycle, from frontend UI/UX to backend infrastructure and database management.",
+        },
+        {
+          description:
+            "To implement and optimize a real-time system using technologies like Expo and PostgreSQL for immediate data updates.",
+        },
+        {
+          description:
+            "To solve the common problem of fragmented event platforms by creating a unified, efficient, and user-friendly solution.",
+        },
+        {
+          description:
+            "To deepen my knowledge in full-stack development, utilizing TypeScript for type safety across the entire application.",
+        },
+        {
+          description:
+            "To practice developing high-quality, responsive mobile applications that incorporate modern features like haptics and push notifications.",
+        },
+        {
+          description:
+            "To integrate robust authentication and state management systems (using tools like Jest for testing) to ensure application reliability and security.",
+        },
+      ],
+      futurePlans: [
+        {
+          description:
+            "Integrate a payment gateway (e.g., Stripe) to support paid event registrations and ticket sales directly within the app.",
+        },
+        {
+          description:
+            "Implement an event recommendation engine based on user activity, location, and past registrations to enhance discovery.",
+        },
+        {
+          description:
+            "Develop a dedicated organizer dashboard with tools for event analytics, attendee management, and communication features.",
+        },
+        {
+          description:
+            "Expand the platform with social features, allowing users to share events and invite friends directly.",
+        },
       ],
     },
   },

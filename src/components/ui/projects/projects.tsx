@@ -3,7 +3,7 @@
 import { projectData } from "@/components/data";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRightIcon, GithubLogoIcon, GlobeSimpleIcon } from "@phosphor-icons/react";
+import { ArrowRightIcon, FunnelIcon, GithubLogoIcon, GlobeSimpleIcon } from "@phosphor-icons/react";
 import { Button } from "../button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../tooltip";
 import { ProjectTechStackBtn } from "../main/body-btn";
@@ -16,12 +16,20 @@ export function Project() {
 
   return (
     <>
-      <div className="flex gap-1.5 mt-2 mb-6">
-        <h2 className="text-xl font-semibold">All Projects</h2>
+      <div className="flex justify-between items-center">
+        <div className="flex gap-1.5 mt-2 mb-6">
+          <h2 className="text-xl font-semibold">All Projects</h2>
 
-        <p className="text-sm text-secondary pt-1.5">
-          ({totalProjects} projects)
-        </p>
+          <p className="text-sm text-secondary pt-1.5">
+            ({totalProjects} projects)
+          </p>
+        </div>
+
+        <div className="flex items-center text-muted-foreground gap-1">
+          <FunnelIcon size={16} />
+
+          <p className="text-sm">Most recent</p>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
