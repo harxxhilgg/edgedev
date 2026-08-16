@@ -19,7 +19,7 @@ export default function PdfViewer() {
   useEffect(() => {
     const updateWidth = () => {
       const containerWidth = wrapperRef.current?.clientWidth ?? 0;
-      const w = Math.min(containerWidth - 40, 800);
+      const w = Math.min(containerWidth, 800);
 
       setPageWidth(w);
     };
@@ -39,7 +39,7 @@ export default function PdfViewer() {
               <p className="p-4 text-sm text-black/60 dark:text-white/60"></p>
             }
             error={
-              <p className="p-4 text-sm text-red-500">Failed to load PDF</p>
+              <p className="p-4 text-sm text-red-500">Failed to load Resume</p>
             }
           >
             <Page
