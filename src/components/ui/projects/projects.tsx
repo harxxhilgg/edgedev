@@ -25,7 +25,7 @@ export function Project() {
           </p>
         </div>
 
-        <div className="flex items-center text-muted-foreground gap-1">
+        <div className="flex items-center text-muted-foreground gap-1.5">
           <FunnelIcon size={16} />
 
           <p className="text-sm">Most recent</p>

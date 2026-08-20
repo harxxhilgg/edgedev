@@ -20,7 +20,7 @@ export function DetailsLinkBtns({
           onClick={() => window.open(website, "_blank")}
         >
           <GlobeIcon />
-          Live Demo
+          Live
         </Button>
       )}
 
